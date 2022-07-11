@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; connect-src https://jisho.org/ ; style-src data: file:">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="styles.css">
+    <link id="temp-style" rel="stylesheet" type="text/css">
+    <title>Kanji</title>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="list_menu"></div>
+    </div>
+    <div id="quiz">
+        <div id="quiz_header">
+            <span id="card_actions">
+                <a class="back_to_list" href="#">back</a>
+                <a class="set_black">Mark all kanji black</a>
+                <a class="set_red_to_black">Mark all red kanji black</a>
+            </span>
+            <h2 id="current_list_link"></h2>
+        </div>
+        <div id="quiz_items"></div>
+    </div>
+
+    <script src="./code/util.js"></script>
+    <script src="./code/db.js"></script>
+    <script src="./code/grouped_lists.js"></script>
+    <script src="./code/render.js"></script>
+</body>
+
+</html>

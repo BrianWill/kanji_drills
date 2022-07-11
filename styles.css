@@ -1,0 +1,244 @@
+body {
+    background-color: #222;
+    color: #dfdfdf;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: rgb(227, 81, 154);
+    text-decoration-thickness: .03em;
+    text-underline-offset: 3px;
+}
+
+.quiz_item.current {
+    user-select: none;
+    opacity: 100%;
+    border: solid 4px white;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: selected_item_anim;
+    animation-delay: 0s;
+}
+
+.quiz_item.hide_answer:not(.current) {
+    opacity: 50%;
+}
+
+.quiz_item.hide_answer .answer {
+    visibility: hidden;
+}
+
+@keyframes selected_item_anim {
+    0% {
+        border-color: white;
+    }
+
+    50% {
+        border-color: rgb(94, 94, 94);
+    }
+
+    100% {
+        border-color: white;
+    }
+
+}
+
+.list_count_green {
+    display: inline-block;
+    min-width: 70px;
+    color: #444;
+}
+
+
+.quiz_item.selected_item .character,
+.quiz_item.selected_item .word {
+    border: solid white 3px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.quiz_item {
+    background-color: black;
+}
+
+.quiz_item.greenState {
+    background-color: rgb(58 125 32);
+}
+
+.quiz_item.redState {
+    background-color: rgb(165 41 25);
+}
+
+.kanji_item {
+    padding: 10px;
+    margin: 15px;
+    font-size: 180%;
+
+    display: grid;
+    grid-template-columns: 13% 1fr 15%;
+    grid-template-rows: 1fr;
+    gap: 10px 0px;
+    grid-template-areas:
+        "character answer action_links";
+}
+
+.kanji_item .answer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 13px 0px;
+    grid-template-areas:
+        "meanings"
+        "onyomi"
+        "kunyomi";
+    grid-area: answer;
+    color: rgb(149 149 139);
+}
+
+.character {
+    justify-self: center;
+    align-self: center;
+    grid-area: character;
+    font-size: 330%;
+    padding: 0px 33px;
+}
+
+#quiz_header {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    padding: 20px;
+    z-index: 1;
+}
+
+.quiz_item .action_links {
+    user-select: none;
+    justify-self: end;
+    align-self: center;
+    grid-area: action_links;
+    font-size: 150%;
+}
+
+.kanji_item .meanings {
+    grid-area: meanings;
+    color: #df9a39;
+}
+
+.kunyomi {
+    grid-area: kunyomi;
+}
+
+.onyomi {
+    grid-area: onyomi;
+}
+
+.onyomi span {
+    margin-right: 50px;
+    white-space: nowrap;
+}
+
+.kunyomi span {
+    margin-right: 50px;
+    white-space: nowrap;
+}
+
+
+
+.list_entry .list_count {
+    color: #b2a8a8;
+    margin-left: 20px;
+    display: inline-block;
+    min-width: 70px;
+}
+
+.list_link {
+    display: inline-block;
+    min-width: 300px;
+    color: rgb(179, 178, 178);
+    text-decoration: none;
+    user-select: none;
+    font-size: 130%;
+    padding: 5px 23px;
+}
+
+span.list_link:hover {
+    color: white;
+}
+
+.list_date {
+    margin-right: 30px;
+}
+
+div.list_entry .list_actions .mark_red {
+    color: rgb(183, 45, 45);
+}
+
+div.list_entry .list_actions .mark_black {
+    color: black;
+}
+
+div.list_entry .list_actions .mark_green {
+    color: rgb(27, 150, 27);
+}
+
+.list_entry {
+    background-color: rgb(26, 117, 157);
+    padding: 10px;
+    margin: 14px;
+}
+
+.list_actions a {
+    color: #bbb;
+    font-weight: bold;
+}
+
+.list_entry.black {
+    background-color: black;
+}
+
+.list_entry.green {
+    background-color: rgb(58 125 32);
+}
+
+.list_entry.red {
+    background-color: rgb(165 41 25);
+}
+
+.list_actions {
+    visibility: hidden;
+    /* float: right; */
+    padding: 10px 7px;
+    /* vertical-align: middle; */
+    height: 100%;
+}
+
+.list_actions a {
+    margin: 0px 9px;
+}
+
+.list_entry:hover .list_actions {
+    visibility: visible;
+}
+
+#quiz {
+    display: none;
+}
+
+::placeholder {
+    color: rgb(195, 195, 195);
+    font-style: italic;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#card_actions a {
+    margin-right: 10px;
+}

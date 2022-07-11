@@ -1,0 +1,34 @@
+{
+  "name": "kanji_flashcards",
+  "version": "1.0.0",
+  "description": "An Electron-based Anki-like flashcard program",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "copydb": "cp \"C:/Users/Brian/AppData/Roaming/Anki2/User 1/collection.anki2\" \"mydb.sqlite\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "electron-rebuild install-app-deps",
+    "makedb": "node bin/make_db.js",
+    "importKanji": "node bin/kanji_import.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianWill/flashcards.git"
+  },
+  "author": "Brian Will",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianWill/flashcards/issues"
+  },
+  "homepage": "https://github.com/BrianWill/flashcards#readme",
+  "devDependencies": {
+    "electron": "^19.0.7",
+    "electron-rebuild": "^3.2.0",
+    "knex": "^2.0.0",
+    "sqlite3": "^5.0.6",
+    "uuid": "^8.3.2"
+  },
+  "dependencies": {
+    
+  }
+}

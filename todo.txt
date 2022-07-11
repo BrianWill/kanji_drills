@@ -1,0 +1,84 @@
+hover over words in kanji readings to see definitions
+
+last marking time for lists
+
+quantity over quality strategy?
+
+display kanji in alternate styles/fonts
+search
+
+missing kanji:
+    葵 hollyhock  jlpt 1
+    莉 jasmine jlpt 1
+    茜 red dye jlpt 1
+    瑛 sparkle of jewelry jlpt -
+    蒼 pale jlpt -
+    萌 sprout jlpt 1
+    菅 sedge jlpt -
+    嬉
+    濡
+    淀
+    漣
+    杏
+    栞
+    呆
+    柴
+    楓
+    梓
+    綺
+    綾
+    緋
+    曙
+    昌
+    智
+    痒
+    贅
+    蓮
+    遼
+    遥
+    漣
+    諒
+    宀
+    叩
+    噂
+    咳
+    噌
+    喋
+    噛
+    嘘
+    喧
+    嘩
+    吾
+    杏
+    呆
+    亮
+    伊
+    瑛
+    瑞
+    蝶
+    凛
+    凌
+    駿
+    禾
+    頁
+    苺
+    蓮
+    蒙
+    葵
+    莉
+    茜
+    蒼
+    萌
+    菅
+    屁
+    飴
+    聡
+    墟
+    堰
+    輔
+    庄
+    阿
+    靖
+    笠
+    狼
+    狐
