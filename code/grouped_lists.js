@@ -74,66 +74,66 @@ async function makeGroupedLists() {
             `教孝,放方,政正,敗貝,枚木,改己,故古`);
     await permanentList('Winter (right)', `教数放政敗枚改敵故激徴攻微救散敬致敏敷徹撤牧傲敢赦`,
             `救求,致至,敏毎,牧牛,赦赤,教孝,放方,政正,敗貝,枚木,改己,故古`);
-    await permanentList('Wind', `嵐颯楓風`, `嵐,颯,楓,風`);
+    await permanentList('Wind', `嵐颯楓風`, `颯立,楓木`);
     await permanentList('White', `白楽習線階泉皆的激迫皇泊綿伯錦拍舶`,
-            `白,楽,習,線,階,泉,皆,的,激,迫,皇,泊,綿,伯,錦,拍,舶`);
+            `習羽,線糸,階皆,皆比,皇王,舶舟`);
+    await permanentList('Wedding', `哺舗輔浦補捕`, `哺口,舗舎,輔車`);
     await permanentList('Well', `囲丼井耕`, `囲,丼,井,耕`);
     await permanentList('Weapon (right)', `役投殺設段股般殿鍛殴搬没穀殻毀`,
             `役,投,殺,設,段,股,般,殿,鍛,殴,搬,没,穀,殻,毀`);
-    await permanentList('Walk', `渉頻歩`, `頻`);
+    await permanentList('Walk', `渉頻歩`, `頻頁`);
     await permanentList('Village', `里理野童量裏埋鐘瞳黙糧鯉憧`,
-            `里,理王,野,童,量,裏,埋,鐘,瞳,黙,糧,鯉,憧`);
+            `理王,野予,童立,埋土,鯉魚`);
     await permanentList('Vikings (left)', `学労賞堂覚常栄営党蛍掌`,
-            `学,労,賞,堂,覚,常,栄,営,党,蛍,掌`);
-    await permanentList('Umbrella (right)', `礼札乱乳孔`, `礼,札,乱,乳,孔`);
+            `学子,労力,賞員,覚見,栄木,営呂,党兄,蛍虫`);
+    await permanentList('Umbrella (right)', `礼札乱乳孔`, `札木,乱舌,孔子`);
     await permanentList('Turkey (right)', `難稚雄離雑推維雅誰唯准椎雌`,
-            `難,稚,雄,離,雑,推,維,雅,誰,唯,准,椎,雌`);
+            `維糸,雅牙,誰言,唯口,椎木`);
     await permanentList('Turkey', `隹進集曜確難権観護準稚雄催離雑歓推維雇躍勧奪雅携獲焦誰穫鶴唯奮隻濯擁隼准羅椎雌礁`,
-            `隹,進,集,曜,確,難,権,観,護,準,稚,雄,催,離,雑,
-            歓,推,維,雇,躍,勧,奪,雅,携,獲,焦,誰,穫,
-            鶴,唯,奮,隻,濯,擁,隼,准,羅,椎,雌,礁`);
+            `集木,維糸,雇戸,雅牙,誰言,唯口,隻又,隼十,椎木`);
     await permanentList('Tsunami (left) 4', `活海決池泳酒漢注波洋深消港湯流温泣法浅浴治渉汽洗減混済氾汎`,
-        `活,海,決,池,泳,酒,漢,注,波,洋,深,消,港,
-        湯,流,温,泣,法,浅,浴,治,渉,汽,洗,減,混,済,氾,汎`);
+        `活舌,海毎,池也,泳永,注主,波皮,洋羊,消肖,
+        湯易,泣立,法去,浴谷,治台,渉歩,洗先,混昆,済斉`);
     await permanentList('Tsunami (left) 3', `沢況満渡激河汗濃浜清潔添江浮漏渇濡泥汚染液漠源沿湖測油恣濫溺`,
-        `沢,況,満,渡,激,河,汗,濃,浜,清,潔,添,江,
-        浮,漏,渇,濡,泥,汚,染,液,漠,源,沿,湖,測,油,恣,濫,溺`);
+        `沢尺,況兄,渡度,河可,汗干,濃農,浜兵,清青,江工,
+        濡需,泥尼,液夜,漠莫,源原,湖胡,測則,油由`);
     await permanentList('Tsunami (left) 2', `
         漁湾渋潜瀬潟泊滑沼滅滋沈潮涙湿溝澄滝泡涼滴溶淡浸潤洞漂淀涯潰`,
-        `漁,湾,渋,潜,瀬,潟,泊,滑,沼,滅,滋,沈,潮,涙,湿,
-        溝,澄,滝,泡,涼,滴,溶,淡,浸,潤,洞,漂,淀,涯,潰`);
+        `漁魚,潜替,瀬頼,泊白,滑骨,沼召,潮朝,涙戻,
+        澄登,滝竜,泡包,涼京,溶容,淡炎,洞同,漂票,淀定`);
     await permanentList('Tsunami (left) 1', `漫浦沸濯渦没浄洪漬淑濁漆沙汰浪漸漣泌渓湧汁滞津沖派演準沃淫`,
-        `漫,浦,沸,濯,渦,没,浄,洪,漬,淑,濁,漆,沙,汰,
-        浪,漸,漣,泌,渓,湧,汁,滞,津,沖,派,演,準,沃,淫`);
+        `浄争,洪共,漬責,淑叔,沙少,汰太,
+        浪良,漸斬,漣連,泌某,湧勇,汁十,滞帯,沖中,沃天`);
     await permanentList('Tsunami (left)', `
         活海決池泳酒漢注波洋深消港湯流温泣法浅浴治渉汽洗減混済派演準淫潰溺
         沢況満渡激河汗濃浜清潔添江浮漏渇濡泥汚染液漠源沿湖測油汁滞津沖
         漁湾渋潜瀬潟泊滑沼滅滋沈潮涙湿溝澄滝泡涼滴溶淡浸潤洞漂淀涯
         漫浦沸濯渦没浄洪漬淑濁漆沙汰浪漸漣泌渓湧沃濫恣氾汎`,
-        `活,海,決,池,泳,酒,漢,注,波,洋,深,消,港,湯,流,
-        温,泣,法,浅,浴,治,渉,汽,洗,減,混,済,派,演,準,淫,潰,溺,
-        沢,況,満,渡,激,河,汗,濃,浜,清,潔,添,江,浮,漏,渇,
-        濡,泥,汚,染,液,漠,源,沿,湖,測,油,汁,滞,津,沖,
-        漁,湾,渋,潜,瀬,潟,泊,滑,沼,滅,滋,沈,潮,涙,湿,溝,澄,
-        滝,泡,涼,滴,溶,淡,浸,潤,洞,漂,淀,涯,漫,浦,沸,濯,渦,
-        没,浄,洪,漬,淑,濁,漆,沙,汰,浪,漸,漣,泌,渓,湧,沃,濫,恣,氾,汎`);
-    await permanentList('Triceratops', `半当光消削鎖尚肖`, `半,当,光,消,削,鎖,尚,肖`);
-    await permanentList('Tree (top)', `木森査杏奇`, `木,森,査,杏,奇`);
-    await permanentList('Tree (bottom)', `木某楽集葉築栄策案菜染柔梨架桑栞呆柴`,
-            `木,某,楽,集,葉,築,栄,策,案,菜,染,柔,梨,架,桑,栞,呆,柴`);
+        `活舌,海毎,池也,泳永,注主,波皮,洋羊,消肖,
+        湯易,泣立,法去,浴谷,治台,渉歩,洗先,混昆,済斉,沢尺,況兄,渡度,河可,汗干,濃農,浜兵,清青,江工,
+        濡需,泥尼,液夜,漠莫,源原,湖胡,測則,油由,漁魚,潜替,瀬頼,泊白,滑骨,沼召,潮朝,涙戻,
+        澄登,滝竜,泡包,涼京,溶容,淡炎,洞同,漂票,淀定,浄争,洪共,漬責,淑叔,沙少,汰太,
+        浪良,漸斬,漣連,泌某,湧勇,汁十,滞帯,沖中,沃天`);
+    await permanentList('Triceratops', `半当光消削鎖尚肖`, `半干,肖月`);
+    await permanentList('Tree (top)', `木森査杏奇`, `森林,査且,杏口,奇可`);
+    await permanentList('Tree (bottom)', `木某楽集葉築栄案菜染柔梨架桑栞呆柴`,
+            `某甘,案安,柔矛,梨利,架加,呆口`);
     await permanentList('Tree (left) 3', `桜枝杉核棋枠柱樹析枢柄桃木林札校相横植根橋様`,
-            `桜,枝,杉,核,棋,枠,柱,樹,析,枢,柄,桃,木,林,札,校,相,横,植,根,橋,様`);
+            `枝支,柱主,析斤,枢区,桃兆,
+            校交,相目,横黄,植直,根良`);
     await permanentList('Tree (left) 2', `棚椅棟柳概枯欄栓栃朴楓槽椎朽梓桟机楷梗棺村標`,
-            `棚,椅,棟,柳,概,枯,欄,栓,栃,朴,楓,槽,椎,朽,梓,桟,机,楷,梗,棺,村,標`);
+            `椅奇,棟束,概既,枯古,栓全,楓風,槽曹,
+            梓辛,楷皆,梗更,棺官,村寸,標票`);
     await permanentList('Tree (left) 1', `材松格梅枚械機検権株模構極板杯柵枕棒楼柿桁`,
-            `材,松,格,梅,枚,械,機,検,権,株,模,構,極,板,杯,柵,枕,棒,楼,柿,桁`);
+            `材才,松公,格各,梅毎,械戒,機幾,株朱,模莫,
+            板反,杯不,柵冊,柿市,桁行`);
     await permanentList('Tree (left)', `
         木林札校相横植根橋様標材松格梅枚械機検権株模構極板杯柵枕棒机楼楷柿梗棺桁村
         桜枝杉核棋枠柱樹析枢柄桃棚椅棟柳概枯欄栓栃朴楓槽椎朽梓桟`,
-        `木,林,札,校,相,横,植,根,橋,様,標,材,松,格,梅,
-        枚,械,機,検,権,株,模,構,極,板,杯,柵,枕,棒,机,
-        楼,楷,柿,梗,棺,桁,村,桜,枝,杉,核,棋,枠,柱,樹,析,枢,
-        柄,桃,棚,椅,棟,柳,概,枯,欄,栓,栃,朴,楓,槽,椎,朽,梓,桟`);
+        `枝支,柱主,析斤,枢区,桃兆,校交,相目,横黄,植直,根良,
+        椅奇,棟束,概既,枯古,栓全,楓風,槽曹,梓辛,楷皆,梗更,
+        棺官,村寸,標票,材才,松公,格各,梅毎,械戒,機幾,株朱,模莫,
+        板反,杯不,柵冊,柿市,桁行`);
     await permanentList('Treasure chest', `脳胸悩凶`, `脳,胸,悩,凶`);
     await permanentList('Triangle (top)', `命令会全今貪舎倉傘`, `命,令,会,全,今,貪,舎,倉,傘`);
     await permanentList('Trash', `育流棄徹撤硫`, `育,流,棄,徹,撤,硫`);
@@ -201,6 +201,7 @@ async function makeGroupedLists() {
     await permanentList('Spirit (left)', `礼裾社初神福祈禅裕被袖祝褐視補祖複祉裸襟祥禍`,
             `礼,裾,社,初,神,福,祈,禅,裕,被,
             袖,祝,褐,視,補,祖,複,祉,裸,襟,祥,禍`);
+    await permanentList('Slice', `劾該核咳刻`, `劾力,該言,核木,咳口`);
     await permanentList('Skin (right)', `皮波被彼破披`, `皮,波,被,彼,破,披`);
     await permanentList('Simple', `戦単禅弾`, `戦,単,禅,弾`);
     await permanentList('Sick (flank left and top)', `病痒痛症痩療疲癖疫痘疾痴癒痢瘍痕`,
@@ -253,7 +254,7 @@ async function makeGroupedLists() {
     await permanentList('Run (flank left and bottom)', `走起越超趣赴`,
             `走,起,越,超,趣,赴`);
     await permanentList('Roof (top) 2', `審寝宮宅憲寄宴宗富密宣宜宛蜜寮寧寛賓寂宰寡窟`,
-            `審,寝,宮,宅,憲,寄,宴,宗,富,密,
+            `審,寝,宮呂,宅,憲,寄,宴,宗,富,密,
             宣,宜,宛,蜜,寮,寧,寛,賓,寂,宰,寡,窟`);
     await permanentList('Roof (top) 1', `字宝空安室家定客実寒宿完守官塞察容宙宇害宵`,
             `字,宝,空,安,室,家,定,客,実,寒,
@@ -261,7 +262,7 @@ async function makeGroupedLists() {
     await permanentList('Roof (top)', `
         字宝空安室家定客実寒宿完守官察容宙宇塞害審寝宮宅憲寄宴宗富密窟宣宜宵宛蜜寮寧寛賓寂宰寡`,
         `字,宝,空,安,室,家,定,客,実,寒,宿,完,守,官,察,容,
-        宙,宇,塞,害,審,寝,宮,宅,憲,寄,宴,宗,富,密,窟,宣,
+        宙,宇,塞,害,審,寝,宮呂,宅,憲,寄,宴,宗,富,密,窟,宣,
         宜,宵,宛,蜜,寮,寧,寛,賓,寂,宰,寡`);
     await permanentList('Rocket', `離璃`, `璃`);
     await permanentList('Righteousness', `議義犠儀`, `議,犠`);
@@ -295,6 +296,13 @@ async function makeGroupedLists() {
     await permanentList('Pig', `家劇豚隊豪縁墜遂塚蒙`,
             `家,劇,豚,隊,豪,縁,墜,遂,塚,蒙`);
     await permanentList('Past', `法却脚去`, `法,却,脚,去`);
+    await permanentList('Page (right) 2', `項頻顧瀬頃頂須顕煩頰頓頒顎`,
+            `項,頻,顧,瀬,頃,頂,須,顕,煩,頰,頓,頒,顎`);
+    await permanentList('Page (right) 1', `顔頭頁願頑類順領額預頼傾`,
+            `顔,頭,頁,願,頑,類,順,領,額,預,頼,傾`);
+    await permanentList('Page (right)', `顔頭頁願頑類順領額預頼傾項頻顧瀬頃頂須顕煩頰頓頒顎`,
+            `顔,頭,頁,願,頑,類,順,領,額,預,頼,傾,
+            項,頻,顧,瀬,頃,頂,須,顕,煩,頰,頓,頒,顎`);
     await permanentList('Original', `願原源`, `願,原,源`);
     await permanentList('Older brother', `競祝況党呪兄`,
             `競,祝,況,党,呪,兄`);
@@ -336,6 +344,7 @@ async function makeGroupedLists() {
             脈,股,肺,臓,膝,肝,脚,肌,胴,脇,脂,肪,膨,胞,
             騰,腸,膜,胎,胆,腺,謄,臆,朕,肘,膳,肢`);
     await permanentList('Mole', `倒致至到窒`, `倒,致,至,到,窒`);
+    await permanentList('Mohawk', `滴摘適敵`, ``);
     await permanentList('Misc 4', `為旧甘舞牙壁充孝即琴輝塗鬱覇舗且憂恭弊堕垂`,
             `為,旧,甘,舞,牙,壁,充,孝,即,琴,輝,塗,鬱,覇,舗,且,憂,恭,弊,堕,垂`);
     await permanentList('Misc 3', `望求司軍面弁可静飛岡革型差鮮靴児麗衆撃背既`,
@@ -413,8 +422,8 @@ async function makeGroupedLists() {
             `祭,標,禁,余,示,票,宗,隷,
             奈,斎,慰,歳,漂,襟,凛,尉,崇,
             款,条,県,小`);
-    await permanentList('Insect', `虫蜂虹蚊蛇蝶融触蚕`,
-            `虫,蜂,虹,蚊,蛇,蝶,融,触,蚕`);
+    await permanentList('Insect', `虫蜂虹蚊蛇蝶融触蚕蟹`,
+            `虫,蜂,虹,蚊,蛇,蝶,融,触,蚕,蟹解`);
     await permanentList('Ice (left)', `次冷凍凄准凝凛凌`,
             `次,冷,凍,凄,准,凝,凛,凌`);
     await permanentList('Horse (left)', `馬験駅騒駆駐騎駒駄駿`,
@@ -462,13 +471,6 @@ async function makeGroupedLists() {
     await permanentList('Go (flank left and right)', `行術街衛衝衡`, `術,街,衛,衝,衡`);
     await permanentList('Gladiator', `勝藤巻券拳騰誉挙`, `勝,藤,巻,券,拳,騰,誉,挙`);
     await permanentList('Giant', `巨拒距`, `距`);
-    await permanentList('Geoduck (right) 2', `項頻顧瀬頃頂須顕煩頰頓頒顎`,
-            `項,頻,顧,瀬,頃,頂,須,顕,煩,頰,頓,頒,顎`);
-    await permanentList('Geoduck (right) 1', `顔頭頁願頑類順領額預頼傾`,
-            `顔,頭,頁,願,頑,類,順,領,額,預,頼,傾`);
-    await permanentList('Geoduck (right)', `顔頭頁願頑類順領額預頼傾項頻顧瀬頃頂須顕煩頰頓頒顎`,
-            `顔,頭,頁,願,頑,類,順,領,額,預,頼,傾,
-            項,頻,顧,瀬,頃,頂,須,顕,煩,頰,頓,頒,顎`);
     await permanentList('Gate (flank left and right)', `間聞開問門関閥閣閉闘闇閲閑`,
             `間,聞,開,問,門,関,閥,閣,閉,闘,闇,閲,閑`);
     await permanentList('Fruit', `課果菓巣棄裸彙`, `課,棄,彙`);
@@ -606,7 +608,7 @@ async function makeGroupedLists() {
     await permanentList('Boat (left)', `船航般艦舟艇丹舶舷`, `船,航,般,艦,艇延,舶,舷玄`);
     await permanentList('Black hole', `履復腹複覆`, `腹`);
     await permanentList('Bird', `鳥鳴島薦鳩鶴鶏`, `鳴,鳩,鶴,鶏`);
-    await permanentList('Big (look-alike) ', `天未末本大犬太失央休木体来米夫`);
+    await permanentList('Big (look-alike) ', `天未末本大朱犬太失央休木体来米夫`);
     await permanentList('Big', `大太央美器参臭崎突換奈契戻奥奪俺涙爽奨奮喚奔`,
             `美,臭,突,奈,契,戻,奨将`);
     await permanentList('Beforehand', `矛野預序予`, `野,預`);
@@ -624,6 +626,8 @@ async function makeGroupedLists() {
     await permanentList('Asia', `悪亜`);
     await permanentList('Arrow', `矢知医短族疑喉候勧挨疾痴智矯`,
             `知,短,矯`);
+    await permanentList('Anti', `反版板販阪坂飯仮返`,
+            `版片,板木,販貝,坂土,飯食`);
     await permanentList('Animal (left)', `狼猫犯狭独猛獄狙獲狩狂猿猟猶狐`,
             `狼,猫,犯,狭,独,猛,獄,狙,獲,狩,狂,猿,猟,猶,狐`);
     await permanentList('Angel', `茶術述`);
@@ -648,7 +652,7 @@ async function makeGroupedLists() {
     await permanentList('Shapes (meaning) 1', `凸凹痩円形丸小大線広端径濃平`);
     await permanentList('Shapes (meaning)', `凸凹痩円形丸小大玉周線広端径濃平太角境狭長高坂細枚容穴厚姿`);
     await permanentList('Seasons (meaning)', `夏冬秋春節旬季`);
-    await permanentList('Religion (meaning)', `宮坊聖拝誓尼崇禅僧祈寺式信仏神坊宮宗精尼霊崇`);
+    await permanentList('Religion (meaning)', `坊聖拝誓尼崇禅僧祈寺式信仏神坊宮宗精尼霊崇`);
     await permanentList('Quantity (meaning)', `少多均減半殖量額数積増加減幾弥倍輸`);
     await permanentList('Plants (meaning) 3', `樹稲芝梓柴麦植根幹苺松牧果梅藤菜苗`);
     await permanentList('Plants (meaning) 2', `梓麻咲柳杉竹草穂芋林粒桃梨桜森桑枯`);
