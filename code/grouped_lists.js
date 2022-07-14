@@ -170,24 +170,23 @@ async function makeGroupedLists() {
     await permanentList('Stool (right)', `取収奴双又叙淑叔`, `取耳,奴女,叙余`);
     await permanentList('Stool', `友反受度努最報督緊騒痩獲侵堅浸桑又隻慢寂趣文岐斉支`,``);
     await permanentList('Stone (left)', `石研確砂磁破砲硬砕礎碑硝硫礁`,
-            `石,研,確,砂,磁,破,砲,硬,砕,礎,碑,硝,硫,礁`);
-    await permanentList('Stand 2', `端締翌拉笠粒鐘瞳帝颯傍靖憧辛竜産商帝`,
-            `端,締,翌,拉,笠,粒,鐘,瞳,帝,颯,傍,靖,憧,辛,竜,産,商,帝`);
+            `砂少,破皮,砲包,硬更,碑卑,硝肖`);
+    await permanentList('Stand 2', `端締翌拉笠粒鐘瞳帝颯傍靖憧辛竜産商`,
+            `翌羽,笠竹,粒米,颯風,靖青`);
     await permanentList('Stand 1', `立音新顔親競位章童商暗鏡泣韻産諦境接`,
-            `立,音,新,顔,親,競,位,章,童,商,暗,鏡,泣,韻,産,諦,境,接`);
-    await permanentList('Stand', `立音新顔親競位章童商暗鏡泣韻産諦境接端締翌拉笠粒鐘瞳帝颯傍靖憧辛竜産商帝`,
-        `立,音,新,顔,親,競,位,章,童,商,暗,鏡,泣,韻,
-        産,諦,境,接,端,締,翌,拉,笠,粒,鐘,瞳,帝,颯,傍,靖,憧,辛,竜,産,商,帝`);
-    await permanentList('Squid', `験険検剣倹`, `験,険,検,剣,倹`);
-    await permanentList('Spring', `実寒春棒寿奏泰奉俸`, `実,寒,春,棒,寿,奏,泰,奉,俸`);
-    await permanentList('Spikes', `業虚並嘘湿霊繊顕戯`, `業,虚,並,嘘,湿,霊,繊,顕,戯`);
+            `音日,章早,童童,諦帝`);
+    await permanentList('Stand', `立音新顔親競位章童商暗鏡泣韻産諦境接端締翌拉笠粒鐘瞳帝颯傍靖憧辛竜産商`,
+        `翌羽,笠竹,粒米,颯風,靖青,音日,章早,童童,諦帝`);
+    await permanentList('Squid', `験険検剣倹`, `験馬,検木`);
+    await permanentList('Spring', `実寒春棒寿奏泰奉俸`, `春日,寿寸,奏天,泰水,奉干`);
+    await permanentList('Spikes', `業虚並嘘湿霊繊顕戯`, ``);
     await permanentList('Soul (left) 2', `情性忙慣怪悩怖懐快慎恨憎憶悔慄憬`,
-            `情,性,忙,慣,怪,悩,怖,懐,快,慎,恨,憎,憶,悔,慄,憬`);
+            `情青,性生,忙亡,慣貫,怖布,慎真,憎曽,憶意,悔毎,憬景`);
     await permanentList('Soul (left) 1', `悟慌恒惰慢惨惜悼愉憾悦憤慨憧惧`,
-            `悟,慌,恒,惰,慢,惨,惜,悼,愉,憾,悦,憤,慨,憧,惧`);
+            `悟吾,惨参,惜昔,悼卓,憾感,慨既,憧童,惧具`);
     await permanentList('Soul (left)', `情性忙慣怪悩怖懐快慎恨憎惧慄憬憶悔悟慌恒惰慢惨惜悼愉憾悦憤慨憧`,
-            `情,性,忙,慣,怪,悩,怖,懐,快,慎,恨,憎,
-            惧,慄,憬,憶,悔,悟,慌,恒,惰,慢,惨,惜,悼,愉,憾,悦,憤,慨,憧`);
+            `情青,性生,忙亡,慣貫,怖布,慎真,憎曽,憶意,悔毎,憬景,
+            悟吾,惨参,惜昔,悼卓,憾感,慨既,憧童,惧具`);
     await permanentList('Someone', `者暑都署著諸緒賭箸煮曙`,
             `者,暑,都,署,著,諸,緒,賭,箸,煮,曙`);
     await permanentList('Spirit (left)', `礼裾社初神福祈禅裕被袖祝褐視補祖複祉裸襟祥禍`,
@@ -441,6 +440,7 @@ async function makeGroupedLists() {
     await permanentList('Happiness', `達報執`, `報,執`);
     await permanentList('Hair (right)', `形影彫杉彩彰膨`,
             `形,影,彫,杉,彩,彰,膨`);
+    await permanentList('Guard', `説税脱鋭悦閲`, `説言,脱月,鋭金,閲門`);
     await permanentList('Gun (top)', `先年午矢毎朱匂乞勾缶生失`,
             `先,年,午,矢,毎,朱,匂,乞,勾,缶,生,失`);
     await permanentList('Grain (left) 2', `禾科私和利秒秋種税程稚移稽`,
@@ -548,6 +548,7 @@ async function makeGroupedLists() {
     await permanentList('Direction (right)', `方妨防坊訪肪紡`, `妨,坊,訪,肪,紡`);
     await permanentList('Direction (left)', `方放族旅施旗旋`, ``);
     await permanentList('Demon', `鬼魅塊魂魔醜`, `魅,塊,魂`);
+    await permanentList('Death Star', `輸諭癒愉`, `輸車,諭言`);
     await permanentList('Criminal', `非悲罪俳輩斐排扉緋`, `悲,輩,斐,扉,緋`);
     await permanentList('Crab', `期基旗棋碁欺`, `期,基,棋,碁,欺`);
     await permanentList('Cow (left)', `牛物特犠牧牲`, `物勿,特,犠義,牲`);
