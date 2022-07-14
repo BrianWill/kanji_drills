@@ -39,7 +39,6 @@ async function loadEverything() {
     var lists = await db.from('list');
     for (let list of lists) {
         list.cards = await getCardsOfList(list.id);
-        list.selectedCards = new Set();
         allListsByID[list.id] = list;
     }
 }
@@ -81,7 +80,6 @@ async function createList(name, creation_date) {
     );
     var lists = await db('list').where({ id: ids[0] });
     var list = lists[0];
-    list.selectedCards = new Set();
     list.cards = [];
     allListsByID[list.id] = list;
     return list;

@@ -1,6 +1,5 @@
 const { NodeEventEmitter, shell } = require("electron");
 
-
 const secondsInHour = 60 * 60;
 const secondsInDay = secondsInHour * 24;
 const secondsInWeek = secondsInDay * 7;
@@ -62,6 +61,9 @@ document.body.onkeydown = async function (evt) {
         } else if ((evt.key === 'ArrowRight' && evt.altKey) || evt.key === 'End') {
             evt.preventDefault();
             window.scrollTo(0, document.body.scrollHeight);
+        } else if (evt.key === 'r' && evt.altKey) {
+            evt.preventDefault();
+            reviewRed();
         } else if (evt.key === 'Enter' && evt.altKey) {
             evt.preventDefault();
             presentListMenu(false);
@@ -246,6 +248,29 @@ async function presentQuiz(list, randomize) {
         setCurrentItem(0);
     }
     window.scrollTo(0, 0);
+}
+
+async function reviewRed() {
+    let cards = [];
+    let lists = Object.values(allListsByID);
+    for (let list of lists) {
+        if (list.state === redState) {
+            for (let card of list.cards) {
+                if (card.state == redState) {
+                    let copy = Object.assign({}, card);  // shallow
+                    copy.state = blackState;
+                    cards.push(copy);  
+                }
+            }
+        }
+    }
+    currentList = {
+        id: -1,
+        name: `All red cards from all red lists (${cards.length})`,
+        cards: cards
+    };
+    presentQuiz(currentList, true);
+    
 }
 
 function getCurrentCard() {

@@ -17,6 +17,7 @@ npm start
 - DownArrow: select next kanji
 - LeftArrow: mark current kanji red
 - RightArrow: mark current kanji green
+- Alt-R (main screen): review temporary list of all current red cards from all current red lists
 
 ## Lists
 
@@ -37,14 +38,14 @@ Lists with a number at the end of their names are subsets of the larger list wit
 ## Recommended usage
 
 - keep lists you've never studied marked black
-- lists you're currently studied should be marked red
+- lists you're currently actively studying should be marked red
 - lists you've studied but have put aside should be marked green
 
-Generally, you shouldn't have more than a dozen red lists. Also, you should periodically revisit green lists, marking them red to move them back into your working set.
+Generally, you should avoid having too many active (red) lists at any one time. Also, you should periodically revisit green lists, marking them red to move them back into your working set.
 
 ### Drilling a new list
 
-First mark the list red, open the list, and then:
+Mark the list red before opening it, then:
 
 1. Mark a few more kanji red.
 2. Re-sort the list (ALT-Enter).
