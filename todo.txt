@@ -1,15 +1,24 @@
-A-B 又 皆 且:also 至:attain 斤 竹 予 責 青 舟 骨 束
-C   召:call 京 車 因 央 某:certain 必 子 市 登 布:cloth 比 兼:concurrently 工 也 正 舎 勇 牛 
-D-E 亡 度 需 方 土 区 戸 干 各 耳 東 易 食 莫 永 毎 目 免:excuse
-F   氏 牙 農 太 失 羽 少 孝 魚 直 炎 果
-G   門 才 巨 呉 行 金 良 吉  
-H-J 天 家 意 非 虫 昆
-K-M 王 勺 生 昔 台 男 主 寸 会 員 中 月 朝 口
-N-O 次 夜 不 未 尼:nun 奇:odd 古 兄 兆 己 原 
-P-R 頁 去 可 力 先 利 公 疾 真:reality 由 赤 喜 安 肖:resemble 米 田 則
-S   同 言 景:scene 見 売 斉:simultaneous 尺 貝 皮 斬:slice 兵 者 専 泉 立 石 合:suit 日
-T   寺 十 思 糸 共 舌 具:tool 木
-U-Z 歩 水 波 白 風 冬 女 谷
+A    加:add 又 皆 且:also 反 告:announce 矢 至:attain 斤 
+B    玉 竹 豆 成 予 大 鳥 責 青 舟 骨 束
+C    召:call 京 車 因 央 某:certain 必 化 子 周 市 
+Cl   登 布:cloth 比 兼:concurrently 工 也 正 舎 勇 牛 
+D    旦:dawn 亡 度 方 司 土 区 戸 干 
+E    各 耳 東 易 食 入 莫:endless 永 毎 目 秀:excel 免:excuse 有
+F    氏 牙 農 太 失 羽 祭:festival 少 孝 火 魚 五 直 炎 曽:former 占 果
+G    門 才 巨 呉:give 行 金 良 吉 客  
+H-J  半 心 天 重 家 吾 意 示 非 虫 昆
+K    王 知 勺 生 昔 
+L    
+M    台 男 主 寸 会 員 中 交 月 朝 口 玄:mysterious
+N    首 次 夜 不 未 今 番 尼:nun 
+O    奇:odd 古 兄 兆:omen 己 令 元 原 
+P    頁 分 去 可 力 先 利 公 旨:purpose 
+Q    量
+R    雨 疾 真:reality 由 赤 喜 安 肖:resemble 米 田 義:righteousness 川 路 則:rule
+S    同 士 言 申 景:scene 見 売 羊 単 斉:simultaneous 尺 貝 皮 
+Sl   斬:slice 兵 者 専 辛 泉 立 石 止 丁 合:suit 日 支 余:surplus 刀:sword
+T    取 寺 十 思 糸 共 舌 具:tool 木
+U-Z  貴:value 谷 歩 水 波 白 風 冬 女 若
 
 hover over words in kanji readings to see definitions
 
