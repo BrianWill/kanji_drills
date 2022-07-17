@@ -101,13 +101,9 @@ cardActions.onclick = async function (evt) {
         let cards = currentList.cards;
         await setCardState(blackState, cards, currentList);
         presentQuiz(currentList, false);
-    } else if (c.contains('set_red_to_black')) {
-        let cards = currentList.cards.filter(x => x.state === redState);
-        await setCardState(blackState, cards, currentList);
-        presentQuiz(currentList, false);
     } else if (c.contains('toggle_pairs')) {
         showPairs = !showPairs;
-        togglePairsLink.innerText = showPairs ? 'Hide pairs' : 'Show pairs';
+        togglePairsLink.innerText = showPairs ? 'hide pairs' : 'show pairs';
         presentQuiz(currentList, false);
     }
 };
