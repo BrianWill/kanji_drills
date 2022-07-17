@@ -62,7 +62,8 @@ async function getCardsOfList(listId) {
         var card = {
             data: cardDataByUUID[row.card_uuid],
             id: row.id,
-            state: row.state
+            state: row.state,
+            pair: row.pair
         };
         cards.push(card);
     }
@@ -114,6 +115,17 @@ async function addCardsToList(list, cardUUIDs) {
     }
 }
 
+async function setCardPair(list, cardUUID, pairUUID) {
+    await db('card_by_list').where({ card_uuid: cardUUID, list_id: list.id}).update({pair: pairUUID});
+}
+
+async function removeCardsFromList(list, cardUUIDs) {
+    for (let uuid of cardUUIDs) {
+        console.log(`removing card: ${list.id} ${uuid}`);
+        await db('card_by_list').where({ card_uuid: uuid, list_id: list.id }).del();
+    }
+}
+
 async function deleteAllLists() {
     let lists = Object.values(allListsByID);
     for (let list of lists) {
@@ -126,5 +138,5 @@ async function deleteList(list) {
     await db('card_by_list').where({ list_id: list.id }).del();
     await db('list').where({ id: list.id }).del();
     delete allListsByID[list.id];
-    console.log(`deleting list: "${list.id}"`);
+    console.log(`deleting list: "${list.id} ${list.name}"`);
 }

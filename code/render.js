@@ -49,8 +49,6 @@ document.body.onkeydown = async function (evt) {
             console.log(card);
             shell.openExternal('https://www.wanikani.com/kanji/' + card.data.character);
             shell.openExternal('https://jisho.org/search/' + card.data.character);
-        } else if (evt.key === 'Shift') {
-            playWord(card);
         } else if (evt.key === 'Enter' && evt.altKey) {
             presentQuiz(currentList, true);
         }
@@ -355,7 +353,10 @@ document.body.onload = async function () {
 
     //await deleteAllLists();
 
-    //await makeGroupedLists();
+    await makeGroupedLists();
+    await loadEverything();
+    presentListMenu();
+    
     // let unused = await getUnusedKanji();
     // console.log(unused.length, unused);
     // console.log('num kanji ', kanjiCards.length);
