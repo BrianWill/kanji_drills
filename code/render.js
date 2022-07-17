@@ -371,9 +371,9 @@ document.body.onload = async function () {
 
     //await deleteAllLists();
 
-    await makeGroupedLists();
-    await loadEverything();
-    presentListMenu();
+    // await makeGroupedLists();
+    // await loadEverything();
+    // presentListMenu();
     
     // let unused = await getUnusedKanji();
     // console.log(unused.length, unused);
