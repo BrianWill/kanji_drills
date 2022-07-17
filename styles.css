@@ -94,7 +94,15 @@ a {
     margin-left: 15px;
     font-size: 140%;
     /* background-color: rgba(0, 0, 0, 0.5); */
-    color: rgba(1, 1, 1, 0.6);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.kanji_item div.pair .answer {
+    color: rgba(149, 149, 139, 0.75);
+}
+
+.kanji_item div.pair .meanings {
+    color: rgba(212, 155, 48, 0.75);
 }
 
 .character {

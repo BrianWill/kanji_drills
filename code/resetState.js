@@ -8,10 +8,24 @@ const db = require('knex')({
 
 console.log("Reseting all list and card color state to black");
 
+const greenState = 1;
+const redState = 0;
 const blackState = 2;
 
-db('list').update({ state:  blackState }).then(
+db('card_by_list').where({state: redState}).update({ state: blackState }).then (
     (val) => {
-        db('card_by_list').update({ state: blackState });
+        return db('card_by_list').where({state: greenState}).update({ state: blackState });
+    }
+).then(
+    (val) => {
+        return db('list').update({ state: blackState });
+    }
+).then(
+    (val) => {
+        console.log('done');
+        process.exit(1);
     }
 );
+
+
+
