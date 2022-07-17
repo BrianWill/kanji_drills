@@ -50,15 +50,10 @@ a {
 }
 
 
-.quiz_item.selected_item .character,
-.quiz_item.selected_item .word {
-    border: solid white 3px;
-    border-radius: 10px;
-    background-color: black;
-}
-
 .quiz_item {
     background-color: black;
+    border: solid 4px rgba(0, 0, 0, 0);
+    margin: 15px 0px;
 }
 
 .quiz_item.greenState {
@@ -69,21 +64,21 @@ a {
     background-color: rgb(165 41 25);
 }
 
-.kanji_item {
+.kanji_item > div {
     padding: 10px;
-    margin: 15px;
+    margin: 9px;
     font-size: 180%;
-
     display: grid;
-    grid-template-columns: 13% 1fr 15%;
+    grid-template-columns: 21% 1fr;
     grid-template-rows: 1fr;
-    gap: 10px 0px;
+    /* gap: 10px 0px; */
     grid-template-areas:
-        "character answer action_links";
+        "character answer";
 }
 
 .kanji_item .answer {
     display: grid;
+    padding-left: 12px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     gap: 13px 0px;
@@ -93,6 +88,13 @@ a {
         "kunyomi";
     grid-area: answer;
     color: rgb(149 149 139);
+}
+
+.kanji_item > div.pair {
+    margin-left: 15px;
+    font-size: 140%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: rgba(1, 1, 1, 0.6);
 }
 
 .character {
@@ -111,14 +113,6 @@ a {
     width: 100%; /* Full width */
     padding: 20px;
     z-index: 1;
-}
-
-.quiz_item .action_links {
-    user-select: none;
-    justify-self: end;
-    align-self: center;
-    grid-area: action_links;
-    font-size: 150%;
 }
 
 .kanji_item .meanings {

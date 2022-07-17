@@ -11,9 +11,11 @@ var quizHeaderDiv = document.getElementById('quiz_header');
 var quizItemsDiv = document.getElementById('quiz_items');
 var currentListLink = document.getElementById('current_list_link');
 var cardActions = document.getElementById('card_actions');
+var togglePairsLink = document.getElementById('pair_toggle_link');
 
 var currentItemIdx = null;
 var currentList = null;
+var showPairs = true;
 
 document.body.onkeydown = async function (evt) {
     if (currentList) {
@@ -106,6 +108,10 @@ cardActions.onclick = async function (evt) {
         let cards = currentList.cards.filter(x => x.state === redState);
         await setCardState(blackState, cards, currentList);
         presentQuiz(currentList, false);
+    } else if (c.contains('toggle_pairs')) {
+        showPairs = !showPairs;
+        togglePairsLink.innerText = showPairs ? 'Hide pairs' : 'Show pairs';
+        presentQuiz(currentList, false);
     }
 };
 
@@ -172,10 +178,10 @@ function presentListMenu(noScroll) {
         }
 
         html += `<div class="list_entry ${listState}" list_id="${list.id}" list_name="${list.name}">
-            <span class="list_link">${list.name}</span>
-            <span class="list_count">${list.cards.length}</span>
-            <span class="list_date">${date}</span>
-            <span class="list_actions">${actions}</span>  
+                    <span class="list_link">${list.name}</span>
+                    <span class="list_count">${list.cards.length}</span>
+                    <span class="list_date">${date}</span>
+                    <span class="list_actions">${actions}</span>  
             </div>`;
     }
     listMenuDiv.innerHTML = html;
@@ -226,13 +232,28 @@ async function presentQuiz(list, randomize) {
         if (card.state === redState) {
             classes += ' redState';
         }
+        let pair = '';
+        if (card.pair && showPairs) {
+            let pairData = cardDataByUUID[card.pair];
+            pair = `<div class="pair">
+                            <div class="character">${pairData.character}</div>
+                            <div class="answer">
+                                <div class="meanings">${pairData.meanings.join(',&nbsp&nbsp')}</div>
+                                <div class="onyomi"><span>${pairData.onyomi.join('</span><span>')}</span></div>
+                                <div class="kunyomi"><span>${pairData.kunyomi.join('</span><span>')}</span></div>
+                            </div>
+                        </div>`;
+        }
         html += `<div class="kanji_item quiz_item hide_answer ${classes}" list_idx="${i}" card_uuid="${data.uuid}">
-                    <div class="character">${data.character}</div>
-                    <div class="answer">
-                        <div class="meanings">${data.meanings.join(',&nbsp&nbsp')}</div>
-                        <div class="onyomi"><span>${data.onyomi.join('</span><span>')}</span></div>
-                        <div class="kunyomi"><span>${data.kunyomi.join('</span><span>')}</span></div>
+                    <div>
+                        <div class="character">${data.character}</div>
+                        <div class="answer">
+                            <div class="meanings">${data.meanings.join(',&nbsp&nbsp')}</div>
+                            <div class="onyomi"><span>${data.onyomi.join('</span><span>')}</span></div>
+                            <div class="kunyomi"><span>${data.kunyomi.join('</span><span>')}</span></div>
+                        </div>
                     </div>
+                    ${pair}
                 </div>`;
         i++;
     }
@@ -353,9 +374,9 @@ document.body.onload = async function () {
 
     //await deleteAllLists();
 
-    await makeGroupedLists();
-    await loadEverything();
-    presentListMenu();
+    // await makeGroupedLists();
+    // await loadEverything();
+    // presentListMenu();
     
     // let unused = await getUnusedKanji();
     // console.log(unused.length, unused);

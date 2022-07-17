@@ -5,6 +5,7 @@
 ```
 npm install -g electron
 npm install
+npm run resetState
 npm start
 ```
 

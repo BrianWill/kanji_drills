@@ -1,5 +1,3 @@
-const { ipcRenderer } = require('electron');
-
 const db = require('knex')({
     client: 'sqlite3',
     useNullAsDefault: false,
