@@ -690,31 +690,31 @@ async function makeGroupedLists() {
     await makeList('JLPT N4', jlpt[4]);
     await makeList('JLPT N5', jlpt[5]);
 
-    await makeList('* A 1 (Numbers)', `一二三四五六七八九十百千万億零`);
-    await makeList('* A 2', `木言月口方糸女貝日車土寸己且反者心王少`);
-    await makeList('* A 3', `良工田干由白支寺正毎立易召十各丁力羊斤`);
-    await makeList('* A 4', `石未台子兼古舌主皮谷可青包同責兆奇束分`);
-    await makeList('* A 5', `馬昔金足非牛皆肖尺交余米童曽旦大失火欠`);
-    await makeList('* A 6', `里直亡天某因市又生至兄戸歩中官果早及屯`);
-    await makeList('* A 7', `岡合豆意平令重固付食巨呉赤区予呂牙斉共`);
-    await makeList('* A 8', `叔目更公行申東竹刀占化周成司義元半相今`);
-    await makeList('* A 9', `士家羽比永原則朝京炎票林既才奉泉定吉売`);
+    await makeList('* Most common 01 (Numbers)', `一二三四五六七八九十百千万億零`);
+    await makeList('* Most common 02', `木言月口方糸女貝日車土寸己且反者心王少`);
+    await makeList('* Most common 03', `良工田干由白支寺正毎立易召十各丁力羊斤`);
+    await makeList('* Most common 04', `石未台子兼古舌主皮谷可青包同責兆奇束分`);
+    await makeList('* Most common 05', `馬昔金足非牛皆肖尺交余米童曽旦大失火欠`);
+    await makeList('* Most common 06', `里直亡天某因市又生至兄戸歩中官果早及屯`);
+    await makeList('* Most common 07', `岡合豆意平令重固付食巨呉赤区予呂牙斉共`);
+    await makeList('* Most common 08', `叔目更公行申東竹刀占化周成司義元半相今`);
+    await makeList('* Most common 09', `士家羽比永原則朝京炎票林既才奉泉定吉売`);
 
-    await makeList('* B 1', `充帝示音免真単矢軍秀巾式旨川玉祭玄能本`);
-    await makeList('* B 2', `業列建広是屈次求孝舎員見虫太斬甘不辛一`);
-    await makeList('* B 3', `文央耳布景弓折告志若延番奴郎般甲動害疑`);
-    await makeList('* B 4', `九自章藍手出鬼疾舟去先昆度農兵尼夜魚替`);
-    await makeList('* B 5', `頼骨戻登竜容争勇帯利加黄全曹戒幾朱冊走`);
-    await makeList('* B 6', `氏会冬内宿従善致亀専色水貫参卓感具止首`);
-    await makeList('* B 7', `入貴孫庶尊射斥迷午忍普雨客属契鳥宛要却`);
-    await makeList('* B 8', `穴賞山到需象亭憂以貞衣為二表左犬放曲乗`);
-    await makeList('* B 9', `倉亜串徴尉刃秋呈多必恵高段名寿畜壮監何`);
+    await makeList('* Most common 10', `充帝示音免真単矢軍秀巾式旨川玉祭玄能本`);
+    await makeList('* Most common 11', `業列建広是屈次求孝舎員見虫太斬甘不辛一`);
+    await makeList('* Most common 12', `文央耳布景弓折告志若延番奴郎般甲動害疑`);
+    await makeList('* Most common 13', `九自章藍手出鬼疾舟去先昆度農兵尼夜魚替`);
+    await makeList('* Most common 14', `頼骨戻登竜容争勇帯利加黄全曹戒幾朱冊走`);
+    await makeList('* Most common 15', `氏会冬内宿従善致亀専色水貫参卓感具止首`);
+    await makeList('* Most common 16', `入貴孫庶尊射斥迷午忍普雨客属契鳥宛要却`);
+    await makeList('* Most common 17', `穴賞山到需象亭憂以貞衣為二表左犬放曲乗`);
+    await makeList('* Most common 18', `倉亜串徴尉刃秋呈多必恵高段名寿畜壮監何`);
     
-    await makeList('* C 1', `楽右新委句友受最屋察空居末考処念虚発廷`);
-    await makeList('* C 2', `完間即旬波安矛冒夕思胃男七升雲卑禁知有`);
-    await makeList('* C 3', `代任夫取介量路務維灰風井人巻身道卸盾父`);
-    await makeList('* C 4', `留制角妻百征切丸門就宗復毛然暴異民我村`);
-    await makeList('* C 5', `南黒孔幸三君享長昭前将析片守州星`);
+    await makeList('* Most common 19', `楽右新委句友受最屋察空居末考処念虚発廷`);
+    await makeList('* Most common 20', `完間即旬波安矛冒夕思胃男七升雲卑禁知有`);
+    await makeList('* Most common 21', `代任夫取介量路務維灰風井人巻身道卸盾父`);
+    await makeList('* Most common 22', `留制角妻百征切丸門就宗復毛然暴異民我村`);
+    await makeList('* Most common 23', `南黒孔幸三君享長昭前将析片守州星`);
 
     await deleteUnusedLists();
 

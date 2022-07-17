@@ -64,9 +64,6 @@ document.body.onkeydown = async function (evt) {
         } else if (evt.key === 'r' && evt.altKey) {
             evt.preventDefault();
             reviewRed();
-        } else if (evt.key === 'Enter' && evt.altKey) {
-            evt.preventDefault();
-            presentListMenu(false);
         }
     }
 };
@@ -374,9 +371,9 @@ document.body.onload = async function () {
 
     //await deleteAllLists();
 
-    // await makeGroupedLists();
-    // await loadEverything();
-    // presentListMenu();
+    await makeGroupedLists();
+    await loadEverything();
+    presentListMenu();
     
     // let unused = await getUnusedKanji();
     // console.log(unused.length, unused);
