@@ -24,11 +24,10 @@ filter by frequency rank (x/2500), e.g. only top 1-500, or only top 1000-1500
 
 hover over words in kanji readings to see definitions
 
-last marking time for lists
-
 quantity over quality strategy?
 
 display kanji in alternate styles/fonts
+
 search
 
 missing kanji:

@@ -370,7 +370,7 @@ function revealAnswer(ele) {
 document.body.onload = async function () {
     await loadEverything();
     presentListMenu();
-    console.log('loaded renderer');
+    console.log('loaded');
 
     //await deleteAllLists();
 
