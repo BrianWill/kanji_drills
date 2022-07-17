@@ -2,6 +2,10 @@
 
 ## Installation
 
+You'll first need to install [Node (download link)](https://nodejs.org/en/download/).
+
+Then at the command line:
+
 ```
 npm install -g electron
 npm install
@@ -20,13 +24,15 @@ npm start
 - RightArrow: mark current kanji green
 - Alt-R (main screen): review temporary list of all current red cards from all current red lists
 
+Clicking a kun'yomi reading opens a jisho.org search in your browser for that word + kanji combo.
+
 ## Lists
 
 The main screen presents 200+ lists of the jouyou kanji. An individual kanji may appear in multiple lists.
 
 - Click a list's name to see and drill the kanji in the list.
 - Click links to mark a list red, green, or black.
-- A timestamp indicates the last time the list's color was changed.
+- A timestamp indicates when the list was last marked.
 
 The "meaning" lists contain the jouyou kanji whose primary meanings relates to a common theme. For example, the "Animals (meaning)" list contains the kanji related to animals.
 

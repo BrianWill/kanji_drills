@@ -232,22 +232,23 @@ async function presentQuiz(list, randomize) {
         let pair = '';
         if (card.pair && showPairs) {
             let pairData = cardDataByUUID[card.pair];
-            pair = `<div class="pair">
-                            <div class="character">${pairData.character}</div>
-                            <div class="answer">
-                                <div class="meanings">${pairData.meanings.join(',&nbsp&nbsp')}</div>
-                                <div class="onyomi"><span>${pairData.onyomi.join('</span><span>')}</span></div>
-                                <div class="kunyomi"><span>${pairData.kunyomi.join('</span><span>')}</span></div>
-                            </div>
-                        </div>`;
+            pair = `<div class="pair character_container">
+                        <div class="character">${pairData.character}</div>
+                        <div class="answer">
+                            <div class="meanings">${pairData.meanings.join(',&nbsp&nbsp')}</div>
+                            <div class="onyomi"><span>${pairData.onyomi.join('</span><span>')}</span></div>
+                            <div class="kunyomi"><span class="term">${pairData.kunyomi.join('</span><span class="term">')}</span></div>
+                        </div>
+                    </div>`;
         }
+
         html += `<div class="kanji_item quiz_item hide_answer ${classes}" list_idx="${i}" card_uuid="${data.uuid}">
-                    <div>
+                    <div class="character_container">
                         <div class="character">${data.character}</div>
                         <div class="answer">
                             <div class="meanings">${data.meanings.join(',&nbsp&nbsp')}</div>
                             <div class="onyomi"><span>${data.onyomi.join('</span><span>')}</span></div>
-                            <div class="kunyomi"><span>${data.kunyomi.join('</span><span>')}</span></div>
+                            <div class="kunyomi"><span class="term">${data.kunyomi.join('</span><span class="term">')}</div>
                         </div>
                     </div>
                     ${pair}
@@ -342,6 +343,12 @@ quizItemsDiv.onclick = function (evt) {
         return;
     }
     ele.classList.remove('hide_answer');
+    if (evt.target.classList.contains('term')) {
+        let kanji = evt.target.closest('.character_container').querySelector('.character').innerText.trim();
+        let word = evt.target.innerText.trim().replace('.', '');
+        console.log(kanji, word);
+        shell.openExternal(`https://jisho.org/search/${word} ${kanji}`);
+    }
     var idx = parseInt(ele.getAttribute('list_idx'));
     setCurrentItem(idx, false);
     evt.preventDefault();

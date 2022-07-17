@@ -65,6 +65,7 @@ a {
 }
 
 .kanji_item > div {
+    cursor: default;
     padding: 10px;
     margin: 9px;
     font-size: 180%;
@@ -74,6 +75,14 @@ a {
     /* gap: 10px 0px; */
     grid-template-areas:
         "character answer";
+}
+
+.kanji_item > div .term {
+    cursor: pointer;
+}
+
+.kanji_item > div .term:hover {
+    text-decoration: underline;
 }
 
 .kanji_item .answer {
