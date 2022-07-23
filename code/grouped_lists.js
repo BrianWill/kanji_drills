@@ -381,6 +381,7 @@ async function makeGroupedLists() {
     await makeList('Long', `長張髪帳`, `張弓,帳巾`);
     await makeList('Loiter (left)', `後役待得徒律徴往従復微径徳彼御徹征徐循`,
             `待寺,徒走,往主,彼皮,御卸,征正,徐余,循盾`);
+    await makeList('Lip ring', `河可阿崎苛荷歌何`, ``);            
     await makeList('Lid (top)', `六交京夜高卒率亭豪裏褒哀衰亮享`, `交父`);
     await makeList('Life', `生麦星表性喫害産責素割憲潔姓契隆俵牲轄`,
             `星日,責貝,素糸,姓女,牲牛`);
@@ -545,7 +546,7 @@ async function makeGroupedLists() {
             `地也,場易,坂反,増曽,坊方,城成,埋里,埼奇,堀屈`);
     await makeList('Dirt (left)', `土地場坂塩増坊域城境壊均埋埼堀墟垣塔塊塀培壇堰堤墳塚壌坪堪坑塡堆`,
             `墟虚,塊鬼,堤是,坪平,地也,場易,坂反,増曽,坊方,城成,埋里,埼奇,堀屈`);
-    await makeList('Director, Paragraph', `詞飼伺句拘駒`, `詞言,飼食,駒馬`);
+    await makeList('Director, Paragraph', `詞飼伺句拘駒司`, `詞言,飼食,駒馬`);
     await makeList('Direction (right)', `方妨防坊訪肪紡`, `妨女,坊方,訪言,肪月,紡糸`);
     await makeList('Direction (left)', `方放族旅施旗旋`, ``);
     await makeList('Demon', `鬼魅塊魂魔醜`, `魅未,塊土`);
@@ -558,7 +559,7 @@ async function makeGroupedLists() {
     await makeList('Concurrently', `嫌謙兼鎌廉`, `嫌女,謙言,鎌金`);
     await makeList('Compare', `階皆比昆混批屁鹿陛`, `皆白,昆日`);
     await makeList('Comb', `印暇段興鍛臼`, ``);
-    await makeList('Coffin', `考者老拷`, `者日`);
+    await makeList('Coffin', `考者老拷孝`, `者日,孝子`);
     await makeList('Clown', `部倍培賠陪剖`, `培土,賠貝`);
     await makeList('Cliff (flank top and left)', `反歴圧厚厄暦盾后灰`,
             `反又,圧土,灰火`);
@@ -678,8 +679,8 @@ async function makeGroupedLists() {
     await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇`);
     await makeList('Clothing (meaning)', `絹服布着鏡脱袖靴織条装聖拝綿衣帽縫錦絹`);
     await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎`);
-    await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴`);
-    await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩`);
+    await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂`);
+    await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足呂眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩`);
     await makeList('Animals (meaning) 2', `鮭犬毛蟹鰐蛇畜蚊騎魚翼鳩猿匹竜釣卵熊狩狐亀甲`);
     await makeList('Animals (meaning) 1', `虫貝牛羊鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏尾牙鹿`);
     await makeList('Animals (meaning)', `蜂鮭毛犬蟹鰐蛇畜蚊騎魚翼鳩猿尾匹竜釣卵熊狩虫貝牛羊鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏狐牙鹿亀甲`);    

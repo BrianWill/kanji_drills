@@ -15,7 +15,7 @@ var togglePairsLink = document.getElementById('pair_toggle_link');
 
 var currentItemIdx = null;
 var currentList = null;
-var showPairs = true;
+var showPairs = false;
 
 document.body.onkeydown = async function (evt) {
     if (currentList) {
@@ -61,9 +61,12 @@ document.body.onkeydown = async function (evt) {
         } else if ((evt.key === 'ArrowRight' && evt.altKey) || evt.key === 'End') {
             evt.preventDefault();
             window.scrollTo(0, document.body.scrollHeight);
+        } else if (evt.key === 'r' && evt.altKey) {           
+            evt.preventDefault();
+            review(redState);
         } else if (evt.key === 'r' && evt.altKey) {
             evt.preventDefault();
-            reviewRed();
+            review(blueState);
         }
     }
 };
@@ -82,6 +85,9 @@ listMenuDiv.onmousedown = async function (evt) {
         presentListMenu(true);
     } else if (c.contains('mark_red')) {
         setListState(list, redState, listEle);
+        presentListMenu(true);
+    } else if (c.contains('mark_blue')) {
+        setListState(list, blueState, listEle);
         presentListMenu(true);
     } else if (c.contains('mark_green')) {
         setListState(list, greenState, listEle);
@@ -121,10 +127,14 @@ function presentListMenu(noScroll) {
     let red = [];
     let black = [];
     let green = [];
+    let blue = [];
     for (let list of lists) {
         switch (list.state) {
             case redState:
                 red.push(list);
+                break;
+            case blueState:
+                blue.push(list);
                 break;
             case blackState:
                 black.push(list);
@@ -135,6 +145,10 @@ function presentListMenu(noScroll) {
         }
     }
 
+    blue.sort(function (a, b) { 
+        return b.last_marked - a.last_marked;
+    });
+
     red.sort(function (a, b) { 
         return b.last_marked - a.last_marked;
     });
@@ -143,13 +157,13 @@ function presentListMenu(noScroll) {
         return b.last_marked - a.last_marked;
     });
 
-    lists = red.concat(green, black);
+    lists = red.concat(blue, green, black);
 
     var html = '';
     for (var list of lists) {
         let listState = stateClass[list.state];
         let date = '';
-        if (list.state === greenState || list.state === redState) {
+        if (list.state !== blackState) {
             date = unixtimeToDate(list.last_marked).toLocaleDateString('en-us', { 
                     year:"numeric", month:"short", day:"numeric"}) ;
                     // "Friday, Jul 2, 2021"
@@ -158,14 +172,22 @@ function presentListMenu(noScroll) {
         switch (list.state) {
             case redState:
                 actions = `<a class="mark_green" title="Mark the list as green">mark green</a>
+                        <a class="mark_blue" title="Mark the list as blue">mark blue</a>
+                        <a class="mark_black" title="Mark the list as black">mark black</a>`;
+                break;
+            case blueState:
+                actions = `<a class="mark_red" title="Mark the list as red">mark red</a>
+                        <a class="mark_green" title="Mark the list as green">mark green</a>
                         <a class="mark_black" title="Mark the list as black">mark black</a>`;
                 break;
             case greenState:
                 actions = `<a class="mark_red" title="Mark the list as red">mark red</a>
+                        <a class="mark_blue" title="Mark the list as blue">mark blue</a>
                         <a class="mark_black" title="Mark the list as black">mark black</a>`;
                 break;
             case blackState:
                 actions = `<a class="mark_red" title="Mark the list as red">mark red</a>
+                        <a class="mark_blue" title="Mark the list as blue">mark blue</a>
                         <a class="mark_green" title="Mark the list as green">mark green</a>`;
                 break;
         }
@@ -263,16 +285,18 @@ async function presentQuiz(list, randomize) {
     window.scrollTo(0, 0);
 }
 
-async function reviewRed() {
+async function review(color) {
     let cards = [];
+    let cardSet = new Set();
     let lists = Object.values(allListsByID);
     for (let list of lists) {
-        if (list.state === redState) {
+        if (list.state === color) {
             for (let card of list.cards) {
-                if (card.state == redState) {
+                if (card.state == redState && !cardSet.has(card.data.uuid)) {
                     let copy = Object.assign({}, card);  // shallow
                     copy.state = blackState;
                     cards.push(copy);  
+                    cardSet.add(card.data.uuid);
                 }
             }
         }
@@ -283,7 +307,6 @@ async function reviewRed() {
         cards: cards
     };
     presentQuiz(currentList, true);
-    
 }
 
 function getCurrentCard() {

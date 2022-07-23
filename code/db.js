@@ -8,11 +8,13 @@ const db = require('knex')({
 const greenState = 1;
 const redState = 0;
 const blackState = 2;
+const blueState = 3;
 
 const stateClass = {
     '1': 'green',
     '0': 'red',
-    '2': 'black'
+    '2': 'black',
+    '3': 'blue'
 };
 
 var cardDataByUUID = {};   // the data loaded from JSON, which does not include DB row info

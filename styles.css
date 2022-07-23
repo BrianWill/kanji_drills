@@ -190,12 +190,15 @@ div.list_entry .list_actions .mark_black {
     color: black;
 }
 
+div.list_entry .list_actions .mark_blue {
+    color: rgb(26, 87, 114);
+}
+
 div.list_entry .list_actions .mark_green {
     color: rgb(27, 150, 27);
 }
 
 .list_entry {
-    background-color: rgb(26, 117, 157);
     padding: 10px;
     margin: 14px;
 }
@@ -207,6 +210,10 @@ div.list_entry .list_actions .mark_green {
 
 .list_entry.black {
     background-color: black;
+}
+
+.list_entry.blue {
+    background-color: rgb(26, 117, 157);
 }
 
 .list_entry.green {
