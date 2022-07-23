@@ -303,7 +303,7 @@ async function review(color) {
     }
     currentList = {
         id: -1,
-        name: `All red cards from all red lists (${cards.length})`,
+        name: `All red cards from all ${stateClass[color]} lists (${cards.length})`,
         cards: cards
     };
     presentQuiz(currentList, true);
