@@ -64,7 +64,7 @@ document.body.onkeydown = async function (evt) {
         } else if (evt.key === 'r' && evt.altKey) {           
             evt.preventDefault();
             review(redState);
-        } else if (evt.key === 'r' && evt.altKey) {
+        } else if (evt.key === 'b' && evt.altKey) {
             evt.preventDefault();
             review(blueState);
         }
