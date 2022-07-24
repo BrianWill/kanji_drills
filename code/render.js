@@ -128,19 +128,38 @@ function presentListMenu(noScroll) {
     let black = [];
     let green = [];
     let blue = [];
+
+    // used for count of unique cards across the colors of list
+    let redCards = new Set();
+    let greenCards = new Set();
+    let blueCards = new Set();
+    let totalCards = new Set();
+
+    function addCardsToSet(list, set) {
+        for (let card of list.cards) {
+            set.add(card.data.uuid);
+        }
+    }
+
     for (let list of lists) {
         switch (list.state) {
             case redState:
                 red.push(list);
+                addCardsToSet(list, redCards);
+                addCardsToSet(list, totalCards);
                 break;
             case blueState:
                 blue.push(list);
+                addCardsToSet(list, blueCards);
+                addCardsToSet(list, totalCards);
                 break;
             case blackState:
                 black.push(list);
                 break;
             case greenState:
                 green.push(list);
+                addCardsToSet(list, greenCards);
+                addCardsToSet(list, totalCards);
                 break;
         }
     }
@@ -159,7 +178,12 @@ function presentListMenu(noScroll) {
 
     lists = red.concat(blue, green, black);
 
-    var html = '';
+    var html = `<table id="card_count">
+            <tr><td>Red lists: ${red.length}</td><td>Cards: ${redCards.size}</td></tr>
+            <tr><td>Blue lists: ${blue.length}</td><td>Cards: ${blueCards.size}</td></tr>
+            <tr><td>Green lists: ${green.length}</td><td>Cards: ${greenCards.size}</td></tr>
+            <tr><td>Total: ${red.length + blue.length + green.length}</td><td>Cards: ${totalCards.size}</td></tr>
+            </table>`;
     for (var list of lists) {
         let listState = stateClass[list.state];
         let date = '';

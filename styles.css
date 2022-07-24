@@ -61,7 +61,7 @@ a {
 }
 
 .quiz_item.redState {
-    background-color: rgb(165 41 25);
+    background-color: rgb(107, 40, 31);
 }
 
 .kanji_item > div {
@@ -172,6 +172,11 @@ a {
     user-select: none;
     font-size: 130%;
     padding: 5px 23px;
+}
+
+#card_count td {
+    line-height: 1.5em;
+    padding-right: 30px;
 }
 
 span.list_link:hover {
