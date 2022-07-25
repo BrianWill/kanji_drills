@@ -133,7 +133,6 @@ function presentListMenu(noScroll) {
     let redCards = new Set();
     let greenCards = new Set();
     let blueCards = new Set();
-    let totalCards = new Set();
 
     function addCardsToSet(list, set) {
         for (let card of list.cards) {
@@ -146,12 +145,10 @@ function presentListMenu(noScroll) {
             case redState:
                 red.push(list);
                 addCardsToSet(list, redCards);
-                addCardsToSet(list, totalCards);
                 break;
             case blueState:
                 blue.push(list);
                 addCardsToSet(list, blueCards);
-                addCardsToSet(list, totalCards);
                 break;
             case blackState:
                 black.push(list);
@@ -159,7 +156,6 @@ function presentListMenu(noScroll) {
             case greenState:
                 green.push(list);
                 addCardsToSet(list, greenCards);
-                addCardsToSet(list, totalCards);
                 break;
         }
     }
@@ -176,13 +172,15 @@ function presentListMenu(noScroll) {
         return b.last_marked - a.last_marked;
     });
 
+    let totalCards = new Set([...redCards, ...greenCards, ...blueCards]);
+
     lists = red.concat(blue, green, black);
 
     var html = `<table id="card_count">
             <tr><td>Red lists: ${red.length}</td><td>Cards: ${redCards.size}</td></tr>
             <tr><td>Blue lists: ${blue.length}</td><td>Cards: ${blueCards.size}</td></tr>
             <tr><td>Green lists: ${green.length}</td><td>Cards: ${greenCards.size}</td></tr>
-            <tr><td>Total: ${red.length + blue.length + green.length}</td><td>Cards: ${totalCards.size}</td></tr>
+            <tr><td>Total: ${red.length + blue.length + green.length} of ${lists.length}</td><td>Cards: ${totalCards.size}</td></tr>
             </table>`;
     for (var list of lists) {
         let listState = stateClass[list.state];
@@ -416,14 +414,14 @@ function revealAnswer(ele) {
 
 document.body.onload = async function () {
     await loadEverything();
-    presentListMenu();
-    console.log('loaded');
-
+    
     //await deleteAllLists();
 
-    // await makeGroupedLists();
-    // await loadEverything();
-    // presentListMenu();
+    //await makeGroupedLists();
+    //await loadEverything();
+    
+    presentListMenu();
+    console.log('loaded');
     
     // let unused = await getUnusedKanji();
     // console.log(unused.length, unused);

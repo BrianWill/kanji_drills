@@ -137,19 +137,22 @@ async function makeGroupedLists() {
             `維糸,雅牙,誰言,唯口,椎木`);
     await makeList('Turkey', `隹進集曜確難権観護準稚雄催離雑歓推維雇躍勧奪雅携獲焦誰穫鶴唯奮隻濯擁隼准羅椎雌礁`,
             `集木,維糸,雇戸,雅牙,誰言,唯口,隻又,隼十,椎木`);
-    await makeList('Tsunami (left) 4', `活海決池泳酒漢注波洋深消港湯流温泣法浅浴治渉汽洗減混済氾汎`,
-        `活舌,海毎,池也,泳永,注主,波皮,洋羊,消肖,
-        湯易,泣立,法去,浴谷,治台,渉歩,洗先,混昆,済斉`);
-    await makeList('Tsunami (left) 3', `沢況満渡激河汗濃浜清潔添江浮漏渇濡泥汚染液漠源沿湖測油恣濫溺`,
-        `沢尺,況兄,渡度,河可,汗干,濃農,浜兵,清青,江工,
-        濡需,泥尼,液夜,漠莫,源原,湖胡,測則,油由`);
-    await makeList('Tsunami (left) 2', `
-        漁湾渋潜瀬潟泊滑沼滅滋沈潮涙湿溝澄滝泡涼滴溶淡浸潤洞漂淀涯潰`,
-        `漁魚,潜替,瀬頼,泊白,滑骨,沼召,潮朝,涙戻,
-        澄登,滝竜,泡包,涼京,溶容,淡炎,洞同,漂票,淀定`);
-    await makeList('Tsunami (left) 1', `漫浦沸濯渦没浄洪漬淑濁漆沙汰浪漸漣泌渓湧汁滞津沖派演準沃淫`,
-        `浄争,洪共,漬責,淑叔,沙少,汰太,
-        浪良,漸斬,漣連,泌某,湧勇,汁十,滞帯,沖中,沃天`);
+    await makeList('Tsunami (left) 8', `沢況満渡激河汗濃浜清潔添江浮`,
+            `沢尺,況兄,渡度,河可,汗干,濃農,浜兵,清青,江工`);
+    await makeList('Tsunami (left) 7', `湿溝澄滝泡涼滴溶淡浸潤洞漂淀涯潰`,
+            `澄登,滝竜,泡包,涼京,溶容,淡炎,洞同,漂票,淀定`);
+    await makeList('Tsunami (left) 6', `浪漸漣泌渓湧汁滞津沖派演準沃淫`,
+            `浪良,漸斬,漣連,泌某,湧勇,汁十,滞帯,沖中,沃天`);
+    await makeList('Tsunami (left) 5', `活海決池泳酒漢注波洋深消港湯`,
+            `活舌,海毎,池也,泳永,注主,波皮,洋羊,消肖,湯易`);
+    await makeList('Tsunami (left) 4', `流温泣法浅浴治渉汽洗減混済氾汎`,
+        `泣立,法去,浴谷,治台,渉歩,洗先,混昆,済斉`);
+    await makeList('Tsunami (left) 3', `漏渇濡泥汚染液漠源沿湖測油恣濫溺`,
+        `濡需,泥尼,液夜,漠莫,源原,湖胡,測則,油由`);
+    await makeList('Tsunami (left) 2', `漁湾渋潜瀬潟泊滑沼滅滋沈潮涙`,
+        `漁魚,潜替,瀬頼,泊白,滑骨,沼召,潮朝,涙戻,`);
+    await makeList('Tsunami (left) 1', `漫浦沸濯渦没浄洪漬淑濁漆沙汰`,
+        `浄争,洪共,漬責,淑叔,沙少,汰太`);
     await makeList('Tsunami (left)', `
         活海決池泳酒漢注波洋深消港湯流温泣法浅浴治渉汽洗減混済派演準淫潰溺
         沢況満渡激河汗濃浜清潔添江浮漏渇濡泥汚染液漠源沿湖測油汁滞津沖
@@ -164,15 +167,18 @@ async function makeGroupedLists() {
     await makeList('Tree (top)', `木森査杏奇`, `森林,査且,杏口,奇可`);
     await makeList('Tree (bottom)', `木某楽集葉築栄案菜染柔梨架桑栞呆柴`,
             `某甘,案安,柔矛,梨利,架加,呆口`);
-    await makeList('Tree (left) 3', `桜枝杉核棋枠柱樹析枢柄桃木林札校相横植根橋様`,
-            `枝支,柱主,析斤,枢区,桃兆,
-            校交,相目,横黄,植直,根良`);
-    await makeList('Tree (left) 2', `棚椅棟柳概枯欄栓栃朴楓槽椎朽梓桟机楷梗棺村標`,
-            `椅奇,棟束,概既,枯古,栓全,楓風,槽曹,
-            梓辛,楷皆,梗更,棺官,村寸,標票`);
-    await makeList('Tree (left) 1', `材松格梅枚械機検権株模構極板杯柵枕棒楼柿桁`,
-            `材才,松公,格各,梅毎,械戒,機幾,株朱,模莫,
-            板反,杯不,柵冊,柿市,桁行,棒奉`);
+    await makeList('Tree (left) 6', `桃木林札校相横植根橋様`,
+            `桃兆,校交,相目,横黄,植直,根良`);
+    await makeList('Tree (left) 5', `槽椎朽梓桟机楷梗棺村標`,
+            `槽曹,梓辛,楷皆,梗更,棺官,村寸,標票`);
+    await makeList('Tree (left) 4', `材松格梅枚械機検権株`,
+            `材才,松公,格各,梅毎,械戒,機幾,株朱`);
+    await makeList('Tree (left) 3', `桜枝杉核棋枠柱樹析枢柄`,
+            `枝支,柱主,析斤,枢区`);
+    await makeList('Tree (left) 2', `棚椅棟柳概枯欄栓栃朴楓`,
+            `椅奇,棟束,概既,枯古,栓全,楓風`);
+    await makeList('Tree (left) 1', `模構極板杯柵枕棒楼柿桁`,
+            `模莫,板反,杯不,柵冊,柿市,桁行,棒奉`);
     await makeList('Tree (left)', `
         木林札校相横植根橋様標材松格梅枚械機検権株模構極板杯柵枕棒机楼楷柿梗棺桁村
         桜枝杉核棋枠柱樹析枢柄桃棚椅棟柳概枯欄栓栃朴楓槽椎朽梓桟`,
@@ -189,12 +195,18 @@ async function makeGroupedLists() {
     await makeList('Toe', `上下外掛偵卓貞悼赴朴`, `上一,下一,外夕,卓早,貞貝,赴走,朴木`);
     await makeList('Tiger', `劇虞虚慮嘘墟虎膚虐虜戯`, `虞呉,慮思,膚胃,虜男`);
     await makeList('Thread', `糸係素潔索緊繁紫累`, `累田`);
-    await makeList('Thread (left) 3', `糸組紙絵終線級緑編績納紅純縮縦紹継紡繕緻`,
-            `組且,紙氏,絵会,終冬,線泉,級及,績責,納内,紅工,純屯,縮宿,縦従,紹召,紡方,繕善,緻致`);
-    await makeList('Thread (left) 2', `維縄緩繰緒綱紛網糾縁綿綾繊緯緋紋縛紳綻`,
-            `縄亀,緒者,綱岡,紛分,緋非,紋文,縛専,紳申,綻定`);
-    await makeList('Thread (left) 1', `練約紀結細続絡経総統絞給締織綺絶縫紺絹`,
-            `練東,約勺,紀己,結吉,細田,続売,絡各,統充,絞交,給合,締帝,綺奇,絶色,紺甘`);
+    await makeList('Thread (left) 6', `糸組紙絵終線級緑編績`,
+            `組且,紙氏,絵会,終冬,線泉,級及,績責`);
+    await makeList('Thread (left) 5', `縁綿綾繊緯緋紋縛紳綻`,
+            `緋非,紋文,縛専,紳申,綻定`);
+    await makeList('Thread (left) 4', `練約紀結細続絡経総`,
+            `練東,約勺,紀己,結吉,細田,続売,絡各`);
+    await makeList('Thread (left) 3', `納紅純縮縦紹継紡繕緻`,
+            `納内,紅工,純屯,縮宿,縦従,紹召,紡方,繕善,緻致`);
+    await makeList('Thread (left) 2', `維縄緩繰緒綱紛網糾`,
+            `縄亀,緒者,綱岡,紛分`);
+    await makeList('Thread (left) 1', `統絞給締織綺絶縫紺絹`,
+            `統充,絞交,給合,締帝,綺奇,絶色,紺甘`);
     await makeList('Thread (left)', `
         糸組紙絵終線級緑編績納紅純縮縦紹継紡維縄緩繰緒綱紛網糾縁綿繕緻
         綾繊緯緋紋縛紳綻練約紀結細続絡経総統絞給締織綺絶縫紺絹`,
@@ -381,7 +393,7 @@ async function makeGroupedLists() {
     await makeList('Long', `長張髪帳`, `張弓,帳巾`);
     await makeList('Loiter (left)', `後役待得徒律徴往従復微径徳彼御徹征徐循`,
             `待寺,徒走,往主,彼皮,御卸,征正,徐余,循盾`);
-    await makeList('Lip ring', `河可阿崎苛荷歌何`, ``);            
+    await makeList('Lip ring', `河可阿崎苛荷歌何綺`, ``);            
     await makeList('Lid (top)', `六交京夜高卒率亭豪裏褒哀衰亮享`, `交父`);
     await makeList('Life', `生麦星表性喫害産責素割憲潔姓契隆俵牲轄`,
             `星日,責貝,素糸,姓女,牲牛`);
@@ -515,7 +527,7 @@ async function makeGroupedLists() {
     await makeList('Festival', `察際擦祭`, ``);
     await makeList('Feather', `翁羽弱翼習翌翔扇翻`,
             `翁公,翼異,習白,翌立,翔羊,扇戸,翻番`);
-    await makeList('Fault', `鉄秩迭`, `鉄金`);
+    await makeList('Fault', `鉄秩迭失`, `鉄金`);
     await makeList('Explosion', `率塁渋摂脊兆楽薬`, ``);
     await makeList('Excuse', `勉晩免逸`, `勉力,晩日`);
     await makeList('Eye (left)', `目睡眠眼眺瞬瞳瞭睦`,
@@ -551,6 +563,7 @@ async function makeGroupedLists() {
     await makeList('Direction (left)', `方放族旅施旗旋`, ``);
     await makeList('Demon', `鬼魅塊魂魔醜`, `魅未,塊土`);
     await makeList('Death Star', `輸諭癒愉`, `輸車,諭言`);
+    await makeList('Cross (left or right)', `協十計針汁枠酔粋博`, `計言,針金,博専`);
     await makeList('Criminal', `非悲罪俳輩斐排扉緋`, `悲心,輩車,斐文,扉戸,緋糸`);
     await makeList('Crab', `期基旗棋碁欺`, `期月,基土,棋木,碁石,欺欠`);
     await makeList('Cow (left)', `牛物特犠牧牲`, `物勿,特寺,犠義,牲生`);
