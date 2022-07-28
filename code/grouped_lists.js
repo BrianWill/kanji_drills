@@ -540,7 +540,7 @@ async function makeGroupedLists() {
             `飲官,館官,飯反,飴台,飾布,飼司,餓我,飽包,餌耳`);
     await makeList('East', `東練凍棟錬陳欄`, `練糸,棟木,錬金,欄木`);
     await makeList('Ear (left)', `耳取職恥聴聡`, `取又,恥心`);
-    await makeList('Early', `章卓悼早`, `章早`);
+    await makeList('Early', `章卓悼早`, ``);
     await makeList('Dry', `半午平干汗刊肝軒`, `肝月,軒車`);
     await makeList('Drunkard 2', `幾戚戒茂滅威歳繊戴栽伐哉賊戯蔑`, `戯虚`);
     await makeList('Drunkard 1', `成戦感識閥減械機域職裁載惑織我`, `戦単`);
@@ -647,6 +647,7 @@ async function makeGroupedLists() {
     await makeList('Violence (meaning) 2', `刃滅襲銃闘募塁陣将剣烈隊撃攻殺`);
     await makeList('Violence (meaning) 1', `殉拷帥虐尉艦侵征蹴殴砕矛侍砲戦`);
     await makeList('Violence (meaning)', `殉拷帥虐尉艦争侵征蹴殴砕矛侍砲刃滅襲銃闘募塁陣将剣烈隊撃攻突刺絞逮武勢敵刀暴兵守危毒軍士殺戦`);
+    await makeList('Temperature (meaning)', `氷凝凍寒冷熱暑蒸燒湯温暖`);
     await makeList('Time (meaning) 2', `遅速早久昔経現暇回朝晩夜泊夕昼暦旦`);
     await makeList('Time (meaning) 1', `予前後秒時月日今曜昨年歳期間週暁曙`);
     await makeList('Time (meaning)', `暁旦曙予前後秒時月日暦曜昨年歳期間遅今速早久昔経現暇回朝晩夜泊夕週昼`);
@@ -694,9 +695,9 @@ async function makeGroupedLists() {
     await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎`);
     await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂`);
     await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足呂眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩`);
-    await makeList('Animals (meaning) 2', `鮭犬毛蟹鰐蛇畜蚊騎魚翼鳩猿匹竜釣卵熊狩狐亀甲`);
+    await makeList('Animals (meaning) 2', `鮭犬毛蟹鰐蛇畜蚊騎魚翼鳩猿匹竜釣卵熊狩狐亀甲駒`);
     await makeList('Animals (meaning) 1', `虫貝牛羊鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏尾牙鹿`);
-    await makeList('Animals (meaning)', `蜂鮭毛犬蟹鰐蛇畜蚊騎魚翼鳩猿尾匹竜釣卵熊狩虫貝牛羊鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏狐牙鹿亀甲`);    
+    await makeList('Animals (meaning)', `蜂鮭毛犬蟹鰐蛇畜蚊騎魚翼鳩猿尾匹竜釣卵熊狩虫貝牛羊駒鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏狐牙鹿亀甲`);    
     await makeList('JLPT (extra Jouyou)', jlpt['none']);
     await makeList('JLPT N1', jlpt[1]);
     await makeList('JLPT N2', jlpt[2]);

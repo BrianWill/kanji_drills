@@ -15,14 +15,14 @@ npm start
 
 ## Hotkeys:
 
-- HOME or ALT-LeftArrow: jump to top of the page
-- END or ALT-RightArrow: jump to bottom of the page
-- ALT-Enter: re-sort the list
+- Home or Alt-LeftArrow: jump to top of the page
+- End or Alt-RightArrow: jump to bottom of the page
+- Alt-Enter: re-sort the list
+- Enter: (on red card) mark the card green, mark one random black card (if any) green, and re-sort the list
 - UpArrow: select previous kanji
 - DownArrow: select next kanji
 - LeftArrow: mark current kanji red
 - RightArrow: mark current kanji green
-- Alt-R (main screen): review temporary list of all current red cards from all current red lists
 
 Clicking a kun'yomi reading opens a jisho.org search in your browser for that word + kanji combo.
 

@@ -265,3 +265,15 @@ a:hover {
 #card_actions a {
     margin-right: 10px;
 }
+
+
+.frequency {
+    color: #bababa;
+    font-size: 50%;
+    margin-left: 1.4em;
+}
+
+#list_menu a {
+    margin: 8px;
+    display: inline-block;
+}

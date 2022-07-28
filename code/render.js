@@ -6,6 +6,7 @@ const secondsInWeek = secondsInDay * 7;
 
 var menuDiv = document.getElementById('menu');
 var listMenuDiv = document.getElementById('list_menu');
+var listsDiv = document.getElementById('lists');
 var quizDiv = document.getElementById('quiz');
 var quizHeaderDiv = document.getElementById('quiz_header');
 var quizItemsDiv = document.getElementById('quiz_items');
@@ -27,6 +28,8 @@ document.body.onkeydown = async function (evt) {
             ele.classList.remove('greenState');
             revealAnswer(ele);
             await setCardState(blackState, [card], currentList);
+        } else if (evt.key === 'Shift') {
+            revealAnswer(ele);
         } else if (evt.key === 'Escape') {
             presentListMenu();
         } else if ((evt.key === 'ArrowLeft' && evt.altKey) || evt.key === 'Home') {
@@ -53,6 +56,20 @@ document.body.onkeydown = async function (evt) {
             shell.openExternal('https://jisho.org/search/' + card.data.character);
         } else if (evt.key === 'Enter' && evt.altKey) {
             presentQuiz(currentList, true);
+        } else if (evt.key === 'Enter') {
+            if (card.state !== redState) {
+                return;
+            }
+            await setCardState(greenState, [card], currentList);
+
+            // mark the first black card (if any) red
+            for (let card of currentList.cards) {
+                if (card.state === blackState) {
+                    await setCardState(redState, [card], currentList);
+                    break;
+                }
+            }
+            presentQuiz(currentList, true);
         }
     } else {
         if ((evt.key === 'ArrowLeft' && evt.altKey) || evt.key === 'Home') {
@@ -61,17 +78,20 @@ document.body.onkeydown = async function (evt) {
         } else if ((evt.key === 'ArrowRight' && evt.altKey) || evt.key === 'End') {
             evt.preventDefault();
             window.scrollTo(0, document.body.scrollHeight);
-        } else if (evt.key === 'r' && evt.altKey) {           
-            evt.preventDefault();
-            review(redState);
-        } else if (evt.key === 'b' && evt.altKey) {
-            evt.preventDefault();
-            review(blueState);
         }
     }
 };
 
 listMenuDiv.onmousedown = async function (evt) {
+    evt.preventDefault();
+    if (evt.target.classList.contains('review_red')) {
+        review(redState);
+    } else if (evt.target.classList.contains('review_blue')) {
+        review(blueState);
+    }
+}
+
+listsDiv.onmousedown = async function (evt) {
     evt.preventDefault();
     var listEle = evt.target.closest('.list_entry');
     if (!listEle) {
@@ -107,6 +127,10 @@ cardActions.onclick = async function (evt) {
         let cards = currentList.cards;
         await setCardState(blackState, cards, currentList);
         presentQuiz(currentList, false);
+    } else if (c.contains('reveal_answers')) {
+        for (let ele of quizItemsDiv.children) {
+            revealAnswer(ele);
+        }       
     } else if (c.contains('toggle_pairs')) {
         showPairs = !showPairs;
         togglePairsLink.innerText = showPairs ? 'hide pairs' : 'show pairs';
@@ -221,7 +245,7 @@ function presentListMenu(noScroll) {
                     <span class="list_actions">${actions}</span>  
             </div>`;
     }
-    listMenuDiv.innerHTML = html;
+    listsDiv.innerHTML = html;
     menuDiv.style.display = 'block';
     quizDiv.style.display = 'none';
     if (!noScroll) {
@@ -275,7 +299,7 @@ async function presentQuiz(list, randomize) {
             pair = `<div class="pair character_container">
                         <div class="character">${pairData.character}</div>
                         <div class="answer">
-                            <div class="meanings">${pairData.meanings.join(',&nbsp&nbsp')}</div>
+                            <div class="meanings">${pairData.meanings.join(',&nbsp&nbsp')} <span class="frequency">${pairData.frequency || 'rare'}</span></div>
                             <div class="onyomi"><span>${pairData.onyomi.join('</span><span>')}</span></div>
                             <div class="kunyomi"><span class="term">${pairData.kunyomi.join('</span><span class="term">')}</span></div>
                         </div>
@@ -286,7 +310,7 @@ async function presentQuiz(list, randomize) {
                     <div class="character_container">
                         <div class="character">${data.character}</div>
                         <div class="answer">
-                            <div class="meanings">${data.meanings.join(',&nbsp&nbsp')}</div>
+                            <div class="meanings">${data.meanings.join(',&nbsp&nbsp')} <span class="frequency">${data.frequency || 'rare'}</span></div>
                             <div class="onyomi"><span>${data.onyomi.join('</span><span>')}</span></div>
                             <div class="kunyomi"><span class="term">${data.kunyomi.join('</span><span class="term">')}</div>
                         </div>
