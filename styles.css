@@ -187,8 +187,21 @@ span.list_link:hover {
     margin-right: 30px;
 }
 
-div.list_entry .list_actions .mark_red {
+#quiz_header .red {
     color: rgb(183, 45, 45);
+}
+
+#quiz_header .blue {
+    color: rgb(53 138 176);
+}
+
+#quiz_header .green {
+    color: rgb(27, 150, 27);
+}
+
+
+div.list_entry .list_actions .mark_red {
+    color: rgb(233 56 56);
 }
 
 div.list_entry .list_actions .mark_black {

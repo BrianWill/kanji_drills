@@ -23,6 +23,8 @@ npm start
 - DownArrow: select next kanji
 - LeftArrow: mark current kanji red
 - RightArrow: mark current kanji green
+- PageUp: in list, switch to previous list
+- PageDown: in list, switch to next list
 
 Clicking a kun'yomi reading opens a jisho.org search in your browser for that word + kanji combo.
 

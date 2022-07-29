@@ -18,45 +18,71 @@ var currentItemIdx = null;
 var currentList = null;
 var showPairs = false;
 
+var listsOrdered = null;
+
 document.body.onkeydown = async function (evt) {
+    //console.log(evt.key);
     if (currentList) {
         var ele = quizItemsDiv.children[currentItemIdx];
         var card = getCurrentCard();
-        evt.preventDefault();
         if (evt.code === 'Space') {
+            evt.preventDefault();
             ele.classList.remove('redState');
             ele.classList.remove('greenState');
             revealAnswer(ele);
             await setCardState(blackState, [card], currentList);
         } else if (evt.key === 'Shift') {
+            evt.preventDefault();
             revealAnswer(ele);
         } else if (evt.key === 'Escape') {
+            evt.preventDefault();
             presentListMenu();
+        } else if (evt.key === 'PageUp') {
+            evt.preventDefault();
+            let list = prevList();
+            if (list) {
+                presentQuiz(list, true);
+            }
+        } else if (evt.key === 'PageDown') {
+            evt.preventDefault();
+            let list = nextList();
+            if (list) {
+                presentQuiz(list, true);
+            }
         } else if ((evt.key === 'ArrowLeft' && evt.altKey) || evt.key === 'Home') {
+            evt.preventDefault();
             setCurrentItem(0, true);
         } else if ((evt.key === 'ArrowRight' && evt.altKey) || evt.key === 'End') {
+            evt.preventDefault();
             setCurrentItem(quizItemsDiv.children.length - 1, true);
         } else if (evt.key === 'ArrowRight') {
+            evt.preventDefault();
             ele.classList.add('greenState');
             ele.classList.remove('redState');
             revealAnswer(ele);
             await setCardState(greenState, [card], currentList);
         } else if (evt.key === 'ArrowLeft') {
+            evt.preventDefault();
             ele.classList.add('redState');
             ele.classList.remove('greenState');
             revealAnswer(ele);
             await setCardState(redState, [card], currentList);
         } else if (evt.key === 'ArrowDown') {
+            evt.preventDefault();
             nextItem(evt.altKey ? 4 : 1);
         } else if (evt.key === 'ArrowUp') {
+            evt.preventDefault();
             prevItem(evt.altKey ? 4 : 1);
         } else if (evt.code === 'KeyL' && evt.altKey) {
+            evt.preventDefault();
             console.log(card);
             shell.openExternal('https://www.wanikani.com/kanji/' + card.data.character);
             shell.openExternal('https://jisho.org/search/' + card.data.character);
         } else if (evt.key === 'Enter' && evt.altKey) {
+            evt.preventDefault();
             presentQuiz(currentList, true);
         } else if (evt.key === 'Enter') {
+            evt.preventDefault();
             if (card.state !== redState) {
                 return;
             }
@@ -245,6 +271,7 @@ function presentListMenu(noScroll) {
                     <span class="list_actions">${actions}</span>  
             </div>`;
     }
+    listsOrdered = lists;
     listsDiv.innerHTML = html;
     menuDiv.style.display = 'block';
     quizDiv.style.display = 'none';
@@ -253,11 +280,47 @@ function presentListMenu(noScroll) {
     }
 }
 
+function nextList() {
+    if (!currentList) {
+        return null;
+    }
+    let idx = 0;
+    for (let list of listsOrdered) {
+        if (list === currentList) {
+            break;
+        }
+        idx++;
+    }
+    idx++;
+    if (idx >= listsOrdered.length) {
+        return null;
+    }
+    return listsOrdered[idx];
+}
+
+function prevList() {
+    if (!currentList) {
+        return null;
+    }
+    let idx = 0;
+    for (let list of listsOrdered) {
+        if (list === currentList) {
+            break;
+        }
+        idx++;
+    }
+    idx--;
+    if (idx < 0) {
+        return null;
+    }
+    return listsOrdered[idx];
+}
+
 async function presentQuiz(list, randomize) {
     currentList = list;
     currentItemIdx = null;
 
-    currentListLink.innerHTML = currentList.name;
+    currentListLink.innerHTML = `<span class="${stateClass[list.state]}">${currentList.name}</span>`;
 
     // sort cards into greenState and redState
     let greenCards = [];
@@ -357,6 +420,18 @@ async function review(color) {
 
 function getCurrentCard() {
     return currentList.cards[currentItemIdx];
+}
+
+async function setMeanings() {
+
+    let card = getCurrentCard();
+
+    card.data.meanings = new Array(...arguments)
+
+    console.log(card.data.meanings);
+
+    await updateCardData(card);
+
 }
 
 function setCurrentItem(idx, scroll) {

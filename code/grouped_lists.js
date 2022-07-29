@@ -368,7 +368,7 @@ async function makeGroupedLists() {
     await makeList('Mouth (bottom)', `口右台名谷告善害含否哲吾啓杏吉召呂`,
             `含今,否不,哲折,吾五,杏木,吉士,召刀`);
     await makeList('Mouth (top)', `口号兄呈呆`, `呈王,呆木`);
-    await makeList('Morning', `幹乾韓潮`, ``);
+    await makeList('Morning', `幹乾韓潮朝`, ``);
     await makeList('Moon (left) 2', `月服勝脳胸脱腕腰肥豚腹脈股肺臓朕肘膳肢`,
             `腕宛,腰要,肺市,肘寸,肢支`);
     await makeList('Moon (left) 1', `膝肝脚肌胴脇脂肪膨胞騰腸膜胎胆腺謄臆腫`,
@@ -389,7 +389,7 @@ async function makeGroupedLists() {
     await makeList('Mask', `僧増層噌贈憎`, `増土,贈貝`);
     await makeList('Master (right)', `主住注往柱駐`, `柱木,駐馬`);
     await makeList('Machine', `始治飴怠胎台冶`, `始女,怠心,胎月`);
-    await makeList('Long ago', `借措籍惜錯`, `錯金`);
+    await makeList('Long ago', `借措籍惜錯昔`, `錯金`);
     await makeList('Long', `長張髪帳`, `張弓,帳巾`);
     await makeList('Loiter (left)', `後役待得徒律徴往従復微径徳彼御徹征徐循`,
             `待寺,徒走,往主,彼皮,御卸,征正,徐余,循盾`);
@@ -617,7 +617,7 @@ async function makeGroupedLists() {
     await makeList('Big (look-alike)', `天未末本大朱犬太失央休木体来米夫`, ``);
     await makeList('Big', `大太央美器参臭崎突換奈契戻奥奪俺涙爽奨奮喚奔`,
             `美羊,臭自,突穴,奈示,戻戸,奨将`);
-    await makeList('Beforehand', `矛野預序予`, `野里,預頁`);
+    await makeList('Beforehand', `矛野預序予柔`, `野里,預頁,柔木`);
     await makeList('Bear', `追館官師管遣阜帥菅`, `阜十,帥巾`);
     await makeList('Beans', `頭登短豊豆闘痘澄艶鼓`, `頭頁,短矢,豊曲,鼓支`);
     await makeList('Bar (right)', `残浅銭践桟`, `銭金,践足,桟木`);

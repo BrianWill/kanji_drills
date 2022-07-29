@@ -70,6 +70,10 @@ async function getCardsOfList(listId) {
     return cards;
 }
 
+async function updateCardData(card) {
+    await db('card').where({ uuid: card.data.uuid }).update({ data: JSON.stringify(card.data) });
+}
+
 async function createList(name, creation_date) {
     creation_date = creation_date || unixtime();
     var ids = await db('list').insert(
