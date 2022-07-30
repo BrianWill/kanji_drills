@@ -227,10 +227,10 @@ function presentListMenu(noScroll) {
     lists = red.concat(blue, green, black);
 
     var html = `<table id="card_count">
-            <tr><td>Red lists: ${red.length}</td><td>Cards: ${redCards.size}</td></tr>
-            <tr><td>Blue lists: ${blue.length}</td><td>Cards: ${blueCards.size}</td></tr>
-            <tr><td>Green lists: ${green.length}</td><td>Cards: ${greenCards.size}</td></tr>
-            <tr><td>Total: ${red.length + blue.length + green.length} of ${lists.length}</td><td>Cards: ${totalCards.size}</td></tr>
+            <tr><td>Red lists: ${red.length}</td><td>Kanji: ${redCards.size}</td></tr>
+            <tr><td>Blue lists: ${blue.length}</td><td>Kanji: ${blueCards.size}</td></tr>
+            <tr><td>Green lists: ${green.length}</td><td>Kanji: ${greenCards.size}</td></tr>
+            <tr><td>Total: ${red.length + blue.length + green.length} of ${lists.length}</td><td>Kanji: ${totalCards.size}</td></tr>
             </table>`;
     for (var list of lists) {
         let listState = stateClass[list.state];
@@ -412,7 +412,7 @@ async function review(color) {
     }
     currentList = {
         id: -1,
-        name: `All red cards from all ${stateClass[color]} lists (${cards.length})`,
+        name: `All red kanji from all ${stateClass[color]} lists (${cards.length})`,
         cards: cards
     };
     presentQuiz(currentList, true);

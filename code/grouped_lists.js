@@ -470,6 +470,7 @@ async function makeGroupedLists() {
             `積責,秘必,稼家,穂恵,租且,秩失,稿高`);
     await makeList('Grain (left)', `禾科私和利秒秋種税程稚移積稽秘称稲稼穏穂租穫秩稿`,
             `和口,秒少,秋火,種重,程呈,移多,積責,秘必,稼家,穂恵,租且,秩失,稿高`);
+    await makeList('Grain (top)', `禾季委秀香`, `季子,委女,秀乃,香日`);
     await makeList('Good', `良養狼郎娘朗浪痕`, `娘女,朗月`);
     await makeList('Gold (left) 2', `釣鐘鈍鍛鍵錬鉢銘鎖錦鎌鎮錯錠鋳錮`,
             `鐘童,鈍屯,鍛段,鍵建,錬束,鉢本,銘名,鎌兼,鎮真,錯昔,錠定,鋳寿,錮固`);
