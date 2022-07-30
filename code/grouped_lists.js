@@ -347,7 +347,7 @@ async function makeGroupedLists() {
     await makeList('Oneself (right)', `記配紀己妃`, `記言,紀糸,妃女`);
     await makeList('Nurse', `譲嬢壌醸`, `譲言,嬢女,壌土`);
     await makeList('Not', `不杯否`, `杯木,否口`);
-    await makeList('Next', `羨資姿盗諮茨`, `羨羊,資貝,姿女`);
+    await makeList('Next', `次羨資姿盗諮茨`, `羨羊,資貝,姿女`);
     await makeList('Net (top)', `買署罪罰置羅罷罵`,
             `買貝,署者,罪非,置直,羅維,罷能,罵馬`);
     await makeList('Narwhal (flank top and left)', `左右友有存布在`,
@@ -679,6 +679,7 @@ async function makeGroupedLists() {
     await makeList('Language (meaning) 2', `弁詩巻批応本簿帳冊栞条嘆喋項諮款`);
     await makeList('Language (meaning) 1', `語答申声読談話耳論議詞句告警書哉`);
     await makeList('Language (meaning)', `語答申声読談話耳論議詞句告警書弁詩巻批応本簿帳冊栞条嘆喋項諮款哉`);
+    await makeList('Information, Communication, Inquire (meaning)', `糾検査調`);
     await makeList('Home, household objects (meaning)', `皿屋住家鏡席枕傘机鍵椅卓畳扉架庄寮灯荘`);
     await makeList('Food (meaning) 2', `辛餓鉢煎炊漬酵穀瓶脂沸繊餅串噛`);
     await makeList('Food (meaning) 1', `亭飴喫焼飯酢肉汁醤鍋芋豆糖麺粒`);
