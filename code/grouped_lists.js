@@ -568,7 +568,7 @@ async function makeGroupedLists() {
     await makeList('Criminal', `非悲罪俳輩斐排扉緋`, `悲心,輩車,斐文,扉戸,緋糸`);
     await makeList('Crab', `期基旗棋碁欺`, `期月,基土,棋木,碁石,欺欠`);
     await makeList('Cow (left)', `牛物特犠牧牲`, `物勿,特寺,犠義,牲生`);
-    await makeList('Copy', `写与互号呉`, ``);
+    await makeList('Copy', `写与互号呉誤`, ``);
     await makeList('Construction (left)', `工功攻項巧`, `功力,項頁`);
     await makeList('Concurrently', `嫌謙兼鎌廉`, `嫌女,謙言,鎌金`);
     await makeList('Compare', `階皆比昆混批屁鹿陛`, `皆白,昆日`);
@@ -604,7 +604,7 @@ async function makeGroupedLists() {
             `院完,階皆,陽易,阪反,防方,際祭,限良,障章,除余,附付`);
     await makeList('Building (left)', `院階陽阪険防際隠附限障隊除陸降陣隆隣陰阻隙陛隔陶隅陥陳随阿陵陪`,
             `陣車,阻且,陳東,阿可,院完,階皆,陽易,阪反,防方,際祭,限良,障章,除余,附付`);
-    await makeList('Buddy', `君群郡`, `群羊`);
+    await makeList('Buddy', `君群郡伊`, `群羊`);
     await makeList('Brush', `建書妻律筆健糖隷津鍵唐庸事`, `書日,妻女,筆竹`);
     await makeList('Bookshelf', `輪冊論柵倫`, `輪車,論言,柵木`);
     await makeList('Blue (right)', `青情晴清精請靖`, `晴日,精米,請言,靖立`);
@@ -692,7 +692,7 @@ async function makeGroupedLists() {
     await makeList('Crime, Justice (meaning) 2', `訴訟則囚奪懲廷拘賊窃赦拐赦`);
     await makeList('Crime, Justice (meaning) 1', `罪犯非裁律罰権義判審盗怪拉`);
     await makeList('Crime, Justice (meaning)', `罪犯非裁律罰権義判審盗怪訴訟則囚奪懲廷拘賊窃赦拐赦拉`);
-    await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇`);
+    await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇紅`);
     await makeList('Clothing (meaning)', `絹服布着鏡脱袖靴織条装聖拝綿衣帽縫錦絹`);
     await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎`);
     await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂`);
