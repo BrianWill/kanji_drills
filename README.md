@@ -17,12 +17,15 @@ npm start
 
 - Home or Alt-LeftArrow: jump to top of the page
 - End or Alt-RightArrow: jump to bottom of the page
-- Alt-Enter: re-sort the list
-- Enter: (on red card) mark the card green, mark one random black card (if any) green, and re-sort the list
+- Alt-Enter or A: re-sort the list
+- Enter or D: (on red card) mark the card green, mark one random black card (if any) green, and re-sort the list
 - UpArrow: select previous kanji
 - DownArrow: select next kanji
-- LeftArrow: mark current kanji red
-- RightArrow: mark current kanji green
+- LeftArrow: put kanji in unanswered set
+- RightArrow: put kanji in answered set
+- S: unhide answer of current kanji
+- Q: mark kanji
+- E: unmark kanji
 - PageUp: in list, switch to previous list
 - PageDown: in list, switch to next list
 

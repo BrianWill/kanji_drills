@@ -57,7 +57,7 @@ a {
 }
 
 .quiz_item.greenState {
-    background-color: rgb(58 125 32);
+    background-color: rgb(86 85 85);
 }
 
 .quiz_item.redState {
@@ -120,6 +120,14 @@ a {
     grid-area: character;
     font-size: 330%;
     padding: 0px 33px;
+}
+
+/* .marked {
+    border-left: solid white 30px;
+} */
+
+.marked .character {
+    color: rgb(241 207 33);
 }
 
 #quiz_header {
@@ -216,6 +224,10 @@ div.list_entry .list_actions .mark_green {
     color: rgb(27, 150, 27);
 }
 
+div.list_entry .list_actions .mark_white {
+    color: rgb(224, 224, 224);
+}
+
 .list_entry {
     padding: 10px;
     margin: 14px;
@@ -239,7 +251,17 @@ div.list_entry .list_actions .mark_green {
 }
 
 .list_entry.red {
-    background-color: rgb(165 41 25);
+    background-color: rgb(158 48 34);
+}
+
+.list_entry.white {
+    background-color: rgb(255, 255, 255);
+}
+
+.list_entry.white .list_link,
+.list_entry.white .list_count,
+.list_entry.white .list_date {
+    color: rgb(112, 108, 108);
 }
 
 .list_actions {

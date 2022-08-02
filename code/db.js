@@ -9,12 +9,17 @@ const greenState = 1;
 const redState = 0;
 const blackState = 2;
 const blueState = 3;
+const whiteState = 4;
+
+const unmarked = 0;
+const marked = 1;
 
 const stateClass = {
-    '1': 'green',
     '0': 'red',
+    '1': 'green',
     '2': 'black',
-    '3': 'blue'
+    '3': 'blue',
+    '4': 'white'
 };
 
 var cardDataByUUID = {};   // the data loaded from JSON, which does not include DB row info
@@ -31,6 +36,7 @@ async function loadEverything() {
     var rows = await db.from('card').select();
     for (var row of rows) {
         var card = JSON.parse(row.data);
+        card.marking = row.marking;
         cardDataByUUID[card.uuid] = card;
         kanjiCards.push(card);        
     }
@@ -135,6 +141,14 @@ async function deleteAllLists() {
     for (let list of lists) {
         await deleteList(list);
     }
+}
+
+async function setCardMarking(cardUUID, marking) {
+    if (marking !== unmarked && marking !== marked) {
+        throw `invalid mark state: ${cardUUID}`;
+    }
+    await db('card').where({ uuid: cardUUID }).update({ marking: marking });
+    cardDataByUUID[cardUUID].marking = marking;
 }
 
 // does not destroy any cards, only the list itself

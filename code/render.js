@@ -13,6 +13,7 @@ var quizItemsDiv = document.getElementById('quiz_items');
 var currentListLink = document.getElementById('current_list_link');
 var cardActions = document.getElementById('card_actions');
 var togglePairsLink = document.getElementById('pair_toggle_link');
+var workingSetCount = document.getElementById('workingSetCount');
 
 var currentItemIdx = null;
 var currentList = null;
@@ -25,13 +26,7 @@ document.body.onkeydown = async function (evt) {
     if (currentList) {
         var ele = quizItemsDiv.children[currentItemIdx];
         var card = getCurrentCard();
-        if (evt.code === 'Space') {
-            evt.preventDefault();
-            ele.classList.remove('redState');
-            ele.classList.remove('greenState');
-            revealAnswer(ele);
-            await setCardState(blackState, [card], currentList);
-        } else if (evt.key === 'Shift') {
+        if (evt.key === 's') {
             evt.preventDefault();
             revealAnswer(ele);
         } else if (evt.key === 'Escape') {
@@ -55,6 +50,14 @@ document.body.onkeydown = async function (evt) {
         } else if ((evt.key === 'ArrowRight' && evt.altKey) || evt.key === 'End') {
             evt.preventDefault();
             setCurrentItem(quizItemsDiv.children.length - 1, true);
+        } else if (evt.key === 'q') {  // mark
+            evt.preventDefault();
+            await setCardMarking(card.data.uuid, marked);
+            ele.classList.add('marked');
+        } else if (evt.key === 'e') {  // unmark
+            evt.preventDefault();
+            await setCardMarking(card.data.uuid, unmarked);
+            ele.classList.remove('marked');
         } else if (evt.key === 'ArrowRight') {
             evt.preventDefault();
             ele.classList.add('greenState');
@@ -63,10 +66,9 @@ document.body.onkeydown = async function (evt) {
             await setCardState(greenState, [card], currentList);
         } else if (evt.key === 'ArrowLeft') {
             evt.preventDefault();
-            ele.classList.add('redState');
             ele.classList.remove('greenState');
             revealAnswer(ele);
-            await setCardState(redState, [card], currentList);
+            await setCardState(blackState, [card], currentList);
         } else if (evt.key === 'ArrowDown') {
             evt.preventDefault();
             nextItem(evt.altKey ? 4 : 1);
@@ -78,24 +80,16 @@ document.body.onkeydown = async function (evt) {
             console.log(card);
             shell.openExternal('https://www.wanikani.com/kanji/' + card.data.character);
             shell.openExternal('https://jisho.org/search/' + card.data.character);
-        } else if (evt.key === 'Enter' && evt.altKey) {
+        } else if ((evt.key === 'Enter' && evt.altKey) || evt.key === 'a') {
             evt.preventDefault();
-            presentQuiz(currentList, true);
-        } else if (evt.key === 'Enter') {
+            presentQuiz(currentList, true, parseInt(workingSetCount.value));
+        } else if (evt.key === 'Enter' || evt.key === 'd') {
             evt.preventDefault();
-            if (card.state !== redState) {
+            if (card.state !== blackState) {
                 return;
             }
             await setCardState(greenState, [card], currentList);
-
-            // mark the first black card (if any) red
-            for (let card of currentList.cards) {
-                if (card.state === blackState) {
-                    await setCardState(redState, [card], currentList);
-                    break;
-                }
-            }
-            presentQuiz(currentList, true);
+            presentQuiz(currentList, true, parseInt(workingSetCount.value));
         }
     } else {
         if ((evt.key === 'ArrowLeft' && evt.altKey) || evt.key === 'Home') {
@@ -132,6 +126,9 @@ listsDiv.onmousedown = async function (evt) {
     } else if (c.contains('mark_red')) {
         setListState(list, redState, listEle);
         presentListMenu(true);
+    } else if (c.contains('mark_white')) {
+        setListState(list, whiteState, listEle);
+        presentListMenu(true);
     } else if (c.contains('mark_blue')) {
         setListState(list, blueState, listEle);
         presentListMenu(true);
@@ -164,6 +161,16 @@ cardActions.onclick = async function (evt) {
     }
 };
 
+function countMarked(cardUUIDs) {
+    let n = 0;
+    for (let cardUUID of cardUUIDs) {
+        if (cardDataByUUID[cardUUID].marking === greenState) {
+            n++;
+        }
+    }
+    return n;
+}
+
 function presentListMenu(noScroll) {
     currentList = null;
     let lists = Object.values(allListsByID);
@@ -178,11 +185,14 @@ function presentListMenu(noScroll) {
     let black = [];
     let green = [];
     let blue = [];
+    let white = [];
 
     // used for count of unique cards across the colors of list
     let redCards = new Set();
     let greenCards = new Set();
     let blueCards = new Set();
+    let whiteCards = new Set();
+    let blackCards = new Set();
 
     function addCardsToSet(list, set) {
         for (let card of list.cards) {
@@ -202,6 +212,11 @@ function presentListMenu(noScroll) {
                 break;
             case blackState:
                 black.push(list);
+                addCardsToSet(list, blackCards);
+                break;
+            case whiteState:
+                white.push(list);
+                addCardsToSet(list, whiteCards);
                 break;
             case greenState:
                 green.push(list);
@@ -209,6 +224,8 @@ function presentListMenu(noScroll) {
                 break;
         }
     }
+
+
 
     blue.sort(function (a, b) { 
         return b.last_marked - a.last_marked;
@@ -222,15 +239,29 @@ function presentListMenu(noScroll) {
         return b.last_marked - a.last_marked;
     });
 
-    let totalCards = new Set([...redCards, ...greenCards, ...blueCards]);
+    white.sort(function (a, b) { 
+        return b.last_marked - a.last_marked;
+    });
 
-    lists = red.concat(blue, green, black);
+    let totalCards = new Set([...redCards, ...greenCards, ...blueCards, ...whiteCards]);
+    let allCards = new Set([...totalCards, ...blackCards]);
+
+    lists = red.concat(blue, green, white, black);
+
+    let seenCount = red.length + blue.length + green.length + white.length;
+
+    let nRedMarked = countMarked(redCards);
+    let nBlueMarked = countMarked(blueCards);
+    let nGreenMarked = countMarked(greenCards);
+    let nWhiteMarked = countMarked(whiteCards);
+    let nTotalMarked = nRedMarked + nBlueMarked + nGreenMarked + nWhiteMarked;
 
     var html = `<table id="card_count">
-            <tr><td>Red lists: ${red.length}</td><td>Kanji: ${redCards.size}</td></tr>
-            <tr><td>Blue lists: ${blue.length}</td><td>Kanji: ${blueCards.size}</td></tr>
-            <tr><td>Green lists: ${green.length}</td><td>Kanji: ${greenCards.size}</td></tr>
-            <tr><td>Total: ${red.length + blue.length + green.length} of ${lists.length}</td><td>Kanji: ${totalCards.size}</td></tr>
+            <tr><td>Red lists: ${red.length}</td><td>Kanji: ${redCards.size}</td><td>Marked: ${nRedMarked}</td></tr>
+            <tr><td>Blue lists: ${blue.length}</td><td>Kanji: ${blueCards.size}</td><td>Marked: ${nBlueMarked}</td></tr>
+            <tr><td>Green lists: ${green.length}</td><td>Kanji: ${greenCards.size}</td><td>Marked: ${nGreenMarked}</td></tr>
+            <tr><td>White lists: ${white.length}</td><td>Kanji: ${whiteCards.size}</td><td>Marked: ${nWhiteMarked}</td></tr>
+            <tr><td>Total: ${seenCount} of ${lists.length}</td><td>Kanji: ${totalCards.size} of ${allCards.size}</td><td>Marked: ${nTotalMarked}</td></tr>
             </table>`;
     for (var list of lists) {
         let listState = stateClass[list.state];
@@ -241,29 +272,21 @@ function presentListMenu(noScroll) {
                     // "Friday, Jul 2, 2021"
         }
         let actions = '';
-        switch (list.state) {
-            case redState:
-                actions = `<a class="mark_green" title="Mark the list as green">mark green</a>
-                        <a class="mark_blue" title="Mark the list as blue">mark blue</a>
-                        <a class="mark_black" title="Mark the list as black">mark black</a>`;
-                break;
-            case blueState:
-                actions = `<a class="mark_red" title="Mark the list as red">mark red</a>
-                        <a class="mark_green" title="Mark the list as green">mark green</a>
-                        <a class="mark_black" title="Mark the list as black">mark black</a>`;
-                break;
-            case greenState:
-                actions = `<a class="mark_red" title="Mark the list as red">mark red</a>
-                        <a class="mark_blue" title="Mark the list as blue">mark blue</a>
-                        <a class="mark_black" title="Mark the list as black">mark black</a>`;
-                break;
-            case blackState:
-                actions = `<a class="mark_red" title="Mark the list as red">mark red</a>
-                        <a class="mark_blue" title="Mark the list as blue">mark blue</a>
-                        <a class="mark_green" title="Mark the list as green">mark green</a>`;
-                break;
+        if (list.state !== redState) {
+            actions += `<a class="mark_red" title="Mark the list as red">mark red</a>`;
         }
-
+        if (list.state !== blueState) {
+            actions += `<a class="mark_blue" title="Mark the list as blue">mark blue</a>`;
+        }
+        if (list.state !== greenState) {
+            actions += `<a class="mark_green" title="Mark the list as green">mark green</a>`;
+        }
+        if (list.state !== whiteState) {
+            actions += `<a class="mark_white" title="Mark the list as white">mark white</a>`;
+        }
+        if (list.state !== blackState) {
+            actions += `<a class="mark_black" title="Mark the list as black">mark black</a>`;
+        }
         html += `<div class="list_entry ${listState}" list_id="${list.id}" list_name="${list.name}">
                     <span class="list_link">${list.name}</span>
                     <span class="list_count">${list.cards.length}</span>
@@ -316,7 +339,14 @@ function prevList() {
     return listsOrdered[idx];
 }
 
-async function presentQuiz(list, randomize) {
+function sortMarked(a, b) {
+    if (b.data.marking === a.data.marking) {
+        return 0;
+    }
+    return (b.data.marking < a.data.marking) ? -1 : 1;
+}
+
+async function presentQuiz(list, randomize, nCardsWorkingSet) {
     currentList = list;
     currentItemIdx = null;
 
@@ -324,15 +354,11 @@ async function presentQuiz(list, randomize) {
 
     // sort cards into greenState and redState
     let greenCards = [];
-    let redCards = [];
     let blackCards = [];
     for (let card of list.cards) {
         switch (card.state) {
             case greenState:
                 greenCards.push(card);
-                break;
-            case redState:
-                redCards.push(card);
                 break;
             case blackState:
                 blackCards.push(card);
@@ -340,11 +366,15 @@ async function presentQuiz(list, randomize) {
         }
     }
     if (randomize) {
-        shuffle(redCards);
-        shuffle(blackCards);
+        nCardsWorkingSet = nCardsWorkingSet || 0;
+        let firstN = blackCards.slice(0, nCardsWorkingSet);
+        let rest = blackCards.slice(nCardsWorkingSet);
+        shuffle(firstN, true);
+        shuffle(rest);
+        blackCards = firstN.concat(rest);
         shuffle(greenCards);
     }
-    list.cards = redCards.concat(greenCards, blackCards);
+    list.cards = blackCards.concat(greenCards);
     let html = '';
     let i = 0;
     for (var card of list.cards) {
@@ -353,8 +383,8 @@ async function presentQuiz(list, randomize) {
         if (card.state === greenState) {
             classes += ' greenState';
         }
-        if (card.state === redState) {
-            classes += ' redState';
+        if (card.data.marking) {
+            classes += ' marked';
         }
         let pair = '';
         if (card.pair && showPairs) {
@@ -394,14 +424,14 @@ async function presentQuiz(list, randomize) {
     window.scrollTo(0, 0);
 }
 
-async function review(color) {
+async function review(colorState) {
     let cards = [];
     let cardSet = new Set();
     let lists = Object.values(allListsByID);
     for (let list of lists) {
-        if (list.state === color) {
+        if (list.state === colorState) {
             for (let card of list.cards) {
-                if (card.state == redState && !cardSet.has(card.data.uuid)) {
+                if (card.data.marking == 1 && !cardSet.has(card.data.uuid)) {
                     let copy = Object.assign({}, card);  // shallow
                     copy.state = blackState;
                     cards.push(copy);  
@@ -410,9 +440,10 @@ async function review(color) {
             }
         }
     }
+    let color = stateClass[colorState];
     currentList = {
         id: -1,
-        name: `All red kanji from all ${stateClass[color]} lists (${cards.length})`,
+        name: `All marked kanji from all <span class="${color}">${color}</span> lists (${cards.length})`,
         cards: cards
     };
     presentQuiz(currentList, true);
@@ -423,15 +454,10 @@ function getCurrentCard() {
 }
 
 async function setMeanings() {
-
     let card = getCurrentCard();
-
     card.data.meanings = new Array(...arguments)
-
     console.log(card.data.meanings);
-
     await updateCardData(card);
-
 }
 
 function setCurrentItem(idx, scroll) {

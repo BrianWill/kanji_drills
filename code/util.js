@@ -1,4 +1,4 @@
-function shuffle(array) {
+function shuffle(array, moveFirst) {
     let currentIndex = array.length, randomIndex;
 
     if (array.length < 2) {
@@ -19,7 +19,7 @@ function shuffle(array) {
     }
 
     // if original first element is still first, swap it with last element
-    if (array[0] === first) {
+    if (moveFirst && array[0] === first) {
         array[0] = array[array.length - 1];
         array[array.length - 1] = first;
     }

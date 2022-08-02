@@ -118,6 +118,7 @@ async function makeGroupedLists() {
             `教孝,放方,政正,敗貝,枚木,改己,故古`);
     await makeList('Winter (right)', `教数放政敗枚改敵故激徴攻微救散敬致敏敷徹撤牧傲敢赦`,
             `救求,致至,敏毎,牧牛,赦赤,教孝,放方,政正,敗貝,枚木,改己,故古`);
+    await makeList('Winter (bottom)', `憂愛変夏麦`, `変赤,`);
     await makeList('Window', `毎海毒梅慣貫`, ``);
     await makeList('Wind', `嵐颯楓風`, `颯立,楓木`);
     await makeList('White', `白楽習線階泉皆的激迫皇泊綿伯錦拍舶`,
@@ -297,6 +298,7 @@ async function makeGroupedLists() {
     await makeList('Samurai', `仕声売士志装誌隷壮荘穀殻款`, `志心,誌志`);
     await makeList('Same', `興銅筒胴洞同`, `銅金,筒竹,胴月`);
     await makeList('Run (flank left and bottom)', `走起越超趣赴`, `起己,超召,趣取`);
+    await makeList('Root', `根銀節限既響痕退眼懇即恨概慨`, ``);
     await makeList('Roof (top) 2', `審寝宮宅憲寄宴宗富密宣宜宛蜜寮寧寛賓寂宰寡窟`,
             `審番,宮呂,寄奇,宗示,宜且,寂叔,宰辛`);
     await makeList('Roof (top) 1', `字宝空安室家定客実寒宿完守官塞察容宙宇害宵`,
@@ -344,6 +346,7 @@ async function makeGroupedLists() {
     await makeList('Old', `古苦固個居故湖克枯胡据`,
             `固口,克十,枯木,胡月`);
     await makeList('One-sided', `版片`, `版反`);
+    await makeList('Oneself (not right)', `己巻改選港起忌遷`, `忌心,改夂`);
     await makeList('Oneself (right)', `記配紀己妃`, `記言,紀糸,妃女`);
     await makeList('Nurse', `譲嬢壌醸`, `譲言,嬢女,壌土`);
     await makeList('Not', `不杯否`, `杯木,否口`);
@@ -471,7 +474,7 @@ async function makeGroupedLists() {
     await makeList('Grain (left)', `禾科私和利秒秋種税程稚移積稽秘称稲稼穏穂租穫秩稿`,
             `和口,秒少,秋火,種重,程呈,移多,積責,秘必,稼家,穂恵,租且,秩失,稿高`);
     await makeList('Grain (top)', `禾季委秀香`, `季子,委女,秀乃,香日`);
-    await makeList('Good', `良養狼郎娘朗浪痕`, `娘女,朗月`);
+    await makeList('Good', `良養狼郎娘朗浪廊`, `娘女,朗月`);
     await makeList('Gold (left) 2', `釣鐘鈍鍛鍵錬鉢銘鎖錦鎌鎮錯錠鋳錮`,
             `鐘童,鈍屯,鍛段,鍵建,錬束,鉢本,銘名,鎌兼,鎮真,錯昔,錠定,鋳寿,錮固`);
     await makeList('Gold (left) 1', `金鉄鏡銀鉛針録鑑銭銅鍋鈴銃鋼鋭鉱`,
@@ -539,6 +542,7 @@ async function makeGroupedLists() {
     await makeList('Energy', `気汽`, ``);
     await makeList('Eat (left)', `食飲館飯飴飾飼餅餓飢飽餌`,
             `飲官,館官,飯反,飴台,飾布,飼司,餓我,飽包,餌耳`);
+    await makeList('Easy', `場湯陽易腸揚傷`, `腸月,場土`);
     await makeList('East', `東練凍棟錬陳欄`, `練糸,棟木,錬金,欄木`);
     await makeList('Ear (left)', `耳取職恥聴聡`, `取又,恥心`);
     await makeList('Early', `章卓悼早`, ``);
@@ -575,6 +579,7 @@ async function makeGroupedLists() {
     await makeList('Comb', `印暇段興鍛臼`, ``);
     await makeList('Coffin', `考者老拷孝`, `者日,孝子`);
     await makeList('Clown', `部倍培賠陪剖`, `培土,賠貝`);
+    await makeList('Clothes', `裁製壊懐装依衣喪袋襲裂`, `製制,袋代,襲龍,裂列,装壮`);
     await makeList('Cliff (flank top and left)', `反歴圧厚厄暦盾后灰`,
             `反又,圧土,灰火`);
     await makeList('Cleat', `受妥愛乳隠浮菜採稲瞬穏彩鶏渓采淫`, `妥女,乳孔,采木`);
@@ -648,6 +653,7 @@ async function makeGroupedLists() {
     await makeList('Violence (meaning) 2', `刃滅襲銃闘募塁陣将剣烈隊撃攻殺`);
     await makeList('Violence (meaning) 1', `殉拷帥虐尉艦侵征蹴殴砕矛侍砲戦`);
     await makeList('Violence (meaning)', `殉拷帥虐尉艦争侵征蹴殴砕矛侍砲刃滅襲銃闘募塁陣将剣烈隊撃攻突刺絞逮武勢敵刀暴兵守危毒軍士殺戦`);
+    await makeList('Trees / Wood (meaning)', ``);
     await makeList('Temperature (meaning)', `氷凝凍寒冷熱暑蒸燒湯温暖`);
     await makeList('Time (meaning) 2', `遅速早久昔経現暇回朝晩夜泊夕昼暦旦`);
     await makeList('Time (meaning) 1', `予前後秒時月日今曜昨年歳期間週暁曙`);
@@ -706,6 +712,75 @@ async function makeGroupedLists() {
     await makeList('JLPT N3', jlpt[3]);
     await makeList('JLPT N4', jlpt[4]);
     await makeList('JLPT N5', jlpt[5]);
+    
+    await makeList('WaniKani 01', `上口川女二三十七力九一人下大工八入山`);
+    await makeList('WaniKani 02', `玉了水文円白月木千刀丁小日立六右々田左中才王手天五四火出目本犬夕土正丸子`);
+    await makeList('WaniKani 03', `矢市牛切方戸太父少友毛半心内生台母午北今古元外分公引止用万広冬`);
+    await makeList('WaniKani 04', `竹車央写仕耳早気平花足打百氷虫字男主名不号他去皿先赤休申見貝石代礼糸町宝村世年`);
+    await makeList('WaniKani 05', `角斤青体色来社当図毎羽林行金草里作多肉会交近兄雨米走同言自形皮空音学光考回谷声西何麦弟`);
+    await makeList('WaniKani 06', `全後血両明京化国科死亡画地東食直前有私知活長曲首次夜姉点安室海羊店南星州茶思歩向妹`);
+    await makeList('WaniKani 07', `辺付札鳥黒船必末氏失魚以組家欠未紙通民理由校雪強夏高教時弱週風記黄`);
+    await makeList('WaniKani 08', `答反君局買雲楽数決絵住電森助馬間場医朝番所池究道役研身者支話投対`);
+    await makeList('WaniKani 09', `受事美予服度発定談表客重持負相要新部和県保返乗屋売送苦泳仮験物具実試使勝界`);
+    
+    await makeList('WaniKani 10', `進酒始業算運漢鳴集配飲終顔落農速頭聞院調鉄語葉習軽線最開頁親読求転路病横歌起`);
+    await makeList('WaniKani 11', `功成岸競争便老命指初味追神良意労級好昔低育令拾注利位仲放秒別特共努伝戦波洋働`);
+    await makeList('WaniKani 12', `悪息章登寒深倍勉消祭野階庭港暑湯僕島童員商都動第期植根短球泉流合陽歯族旅待温着`);
+    await makeList('WaniKani 13', `皆謝整橋選想器暗疑料感情様養緑熱億殺宿福鏡然詩練賞問館映願士課標銀駅像題輪`);
+    await makeList('WaniKani 14', `能芸術雰骨束周協例折基性妥卒固望材参完松約残季技格苺頑囲的念希狼`);
+    await makeList('WaniKani 15', `紀軍秋信岩仏建猫変晴築勇泣司区英丈夫飯計法晩昼毒昨帰式列浅単坂春寺`);
+    await makeList('WaniKani 16', `浴箱係治危冒留弁証存面遠園門府幸阪急笑荷政品守辞真関険典専冗取曜書`);
+    await makeList('WaniKani 17', `是結底因詳識劇干敗渉果官署察堂幻非愛薬覚常鼻無原栄喜恋悲塩席側兵説細梅虚警`);
+    await makeList('WaniKani 18', `告達焼借弓脳飴胸喫等枚忘苛訓種報句許可祈僧禁静座煙汽叩喉類洗禅`);
+    await makeList('WaniKani 19', `得加冊履忙閥布比歴続減易絡笛容団史昆徒宙混善順宇詞改乱節連舌暴財若`);
+    
+    await makeList('WaniKani 20', `裕尻確械犯害議難災嫌困夢震在飛産罪穴被個機妨倒経率圧防臭余尾論厚妻`);
+    await makeList('WaniKani 21', `責条済委省制批断任素敵羨設評検岡増査審判件際企挙認資義権派務税解総`);
+    await makeList('WaniKani 22', `援態誕状賀各費姿勢諦示寝営坊罰策案提置域応宮袖吸過領脱統価値副観藤`);
+    await makeList('WaniKani 23', `呼崎施城護鬼割職秀俳停宅痒裁律導革贅乳収演現備則準規張優沢師幹看`);
+    await makeList('WaniKani 24', `庁額腕境燃担祝届違差象展層視環製述武型狭管載質量販供肩株触輸腰`);
+    await makeList('WaniKani 25', `慣居逮票属捕捉候輩況響効莫抜鮮満与掛隠模含訟限肥豊替景巻捜構影絞訴補渡`);
+    await makeList('WaniKani 26', `接再独獣菓討故較創造励激占障我徴授往鉛郵針従豚復河貯印振刺突怪汗筆`);
+    await makeList('WaniKani 27', `怒昇迷招腹睡康端極郎健誘貸惑痛退途給就靴眠暇段胃症濃締迫訪織悩屈`);
+    await makeList('WaniKani 28', `攻撃浜綺益児憲冷処微修博程絶凍巨稚幼並麗奇衆潔清録逆移精隊庫妙券傘婦`);
+    await makeList('WaniKani 29', `略積添寄宴板壊督僚杯娘診乾欧恐猛江韓雄航監宗請怖索臣催街詰緊閣促烈`);
+
+    await makeList('WaniKani 30', `更魅背騒飾預版柵旗浮越照漏系覧婚懐撮枕遊快貧延押乏匂盗購適翌渇符濡`);
+    await makeList('WaniKani 31', `帯廊離径融均豪除貨孫墓幾尋編陸探鑑泥巣普棒粉既救似富散華嘆偵驚掃菜脈徳倉`);
+    await makeList('WaniKani 32', `酸賛祖銭込衛机汚飼複染卵永績眼液採志興恩久党序雑桜密秘厳捨訳欲暖迎傷`);
+    await makeList('WaniKani 33', `灰装著裏閉股垂漠異皇拡屁暮忠肺誌操筋否盛宣賃敬尊熟噂砂簡蒸蔵糖納諸窓`);
+    await makeList('WaniKani 34', `豆枝揮刻爪承咳幕紅歓降奴聖推臓損磁誤源芋純薦丼腐沿射縮隷粋痩吐貴縦勤拝`);
+    await makeList('WaniKani 35', `熊噌彫杉喋銅舎酔炎彼紹介湖講寿測互油己払鍋獄戚為恥遅汁醤滞剣破亀厄酢`);
+    await makeList('WaniKani 36', `諾盟将舞債伎鹿換姓牙旧般津療継遺維奈核廃献沖摘及依縄鮭踏伸甘貿頼超幅`);
+    await makeList('WaniKani 37', `患狙陣塁弾葬抗崩遣掲爆眉恵漁香湾跳抱旬聴臨兆契刑募償抵戻昭串闘執跡削`);
+    await makeList('WaniKani 38', `伴齢宜噛賂賄房慮託却需璧致避描刊逃扱奥併膝傾緩奏娠妊贈択還繰抑懸称緒盤`);
+    await makeList('WaniKani 39', `控宛充渋岐埋鈴埼棋囚譲雇免群枠銃仙邦御慎躍謙阜片項斐隆圏勧拒稲奪鋼甲壁祉`);
+
+    await makeList('WaniKani 40', `拉敏吹唱衝戒兼薄堀剤雅孝頻駆俊嬉誉茂殿殖隣麺繁巡柱携褒排駐顧犠獲鋭敷妖透`);
+    await makeList('WaniKani 41', `棄凄至拠蜂儀炭衣潜偽畑蛍拳郷蜜仁遜侵嘘鉱喧伺徹瀬嘩墟酎措誠虎艦撤樹包`);
+    await makeList('WaniKani 42', `析弧到軸綱挑焦掘紛範括床握枢揚潟芝肝餅喪網克泊双柄哲斎袋揺滑堅暫糾荒`);
+    await makeList('WaniKani 43', `襲沼朗摩趣懲慰懇筒滅距籍露炉柔擦琴垣即威滋牧泰旨刷珍封斉沈撲裂潮貢誰`);
+    await makeList('WaniKani 44', `刃缶砲笠竜拶縁忍釣吉粒髪丘俺斗寸桃梨姫挨娯謎侍叱棚叫匹辛芽嵐涙雷塔朱翼`);
+    await makeList('WaniKani 45', `頃菌鐘舟嫁暦曇也塾呪湿稼疲翔賭霊溝狩脚澄塊狂嬢裸岳磨陰肌魂矛眺硬卓凶滝井`);
+    await makeList('WaniKani 46', `墨瞬泡穏孔椅菊涼綿魔寮鳩鈍鍛碁癖穂吾鍵盆庄猿棟誇瞳寧俵幽架黙斬帝租錬阻歳零`);
+    await makeList('WaniKani 47', `幣箸瞭崖炊粧墜欺滴塀霧扇扉恨帽憎佐挿伊詐如唇掌婆哀虹爽憩煎尺砕粘畳胴巾芯柳`);
+    await makeList('WaniKani 48', `遂蓄脇殴咲鉢賢彩隙培踊闇斜尽霜穫麻騎辱灯畜溶蚊帳塗貼輝憶悔耐盾蛇班餓飢迅脅`);
+    await makeList('WaniKani 49', `概拘煮覆駒悟慌謀鶴拓衰奨淡礎陛浸劣勘隔蹴桑尼珠抽壇陶妃刈紫唯剛征誓俗潤`);
+
+    await makeList('WaniKani 50', `偶巧鰐把駄洞伯唐彰諮廷蟹晶堰漂淀堤后疫翻鬱涯銘仰漫簿亭訂壮軌奮峰墳搬邪`);
+    await makeList('WaniKani 51', `又肯浦挟沸瓶召貞亮襟隅郡燥釈脂偉軒蓮慈塚玄肪耕媛邸喚苗隻膚軟郊頂濯渦聡枯`);
+    await makeList('WaniKani 52', `祥呂偏茨陥鎖賠恒綾没擁遭噴殊倫陳隼乃輔猟唆惰怠覇須牲秩孤芳貫糧颯慢膨遇`);
+    await makeList('WaniKani 53', `諭随胡搭錦鯉胞浄帥諒蒙曙惨稿啓披繊徐葵騰据莉緯瓜虐戴艇丹緋准舗壌駿剰寛`);
+    await makeList('WaniKani 54', `庶且顕杏栞欄冠酷叙逸紋阿愚尚拐悠勲疎謡哺栽践呈傲疾茜酬呆鎌粛茎痴荘鯨卸`);
+    await makeList('WaniKani 55', `累伏虜循粗凝栓瑛旦奉遼郭抹佳惜憂悼癒栃龍弥髄勿傍愉赴昌憾朴脊該之鎮尿賓那`);
+    await makeList('WaniKani 56', `匠拍縛飽柴蝶弦凛庸錯轄悦窮嘉弊遥洪紳呉穀摂寂宰陵凡尉靖恭縫舶搾猶窒碑智`);
+    await makeList('WaniKani 57', `盲醸凹弔凸烏敢堕鼓衡伐酵閲遮腸瑠乙楓膜紺蒼漬哉峡賊旋俸喝羅萌槽坪遍胎`);
+    await makeList('WaniKani 58', `陪扶迭鶏瑞暁剖凌藩譜璃淑傑殻錠媒濁椎赦戯享嘱肖憤朽奔帆菅酌慨絹窃硫`);
+    await makeList('WaniKani 59', `亜屯岬鋳拙詠慶酪篤侮堪禍雌睦胆擬梓漆閑憧卑姻忌曹峠吟礁沙蔑汰紡遷叔甚浪崇`);
+
+    await makeList('WaniKani 60', `煩款蛮廉劾某矯痢逝狐漸升婿匿謹藍桟殉坑罷妄漣藻泌唄畔倹拷醜冥渓湧寡慕`);
+
+
 
     await makeList('* Most common 01 (Numbers)', `一二三四五六七八九十百千万億零`);
     await makeList('* Most common 02', `木言月口方糸女貝日車土寸己且反者心王少`);
