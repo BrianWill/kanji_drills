@@ -420,7 +420,7 @@ async function makeGroupedLists() {
         仲中,働動,僕業,億意,像象,例列,信言,但旦,値直,俳非,停亭,優憂,供共,
         健建,促足,似以,偵貞,債責,伎支,依衣,侮毎,偽為,仁二,伺司,侍寺,俵表,
         佐左,俗谷,伯白,伏犬,俸奉,倣放`);
-    await makeList('Landslide', `農震振娠唇辱`, `農曲,震雨,娠女,唇口,辱寸`);
+    await makeList('Landslide', `農震振娠唇辱濃`, `農曲,震雨,娠女,唇口,辱寸`);
     await makeList('Ladle (right)', `科料斗斜`, `料米,斜余`);
     await makeList('Lack (right)', `次欠飲歌欧欲歓吹炊欺軟款`, 
             `飲食,欧区,欲谷,吹口,炊火,軟車`);
@@ -435,7 +435,7 @@ async function makeGroupedLists() {
             `路足,格木,絡糸,略田,賂貝`);
     await makeList('King (left)', `王理球現環珍班珠瑛瑠瑞璃斑玩`,
             `理里,球求,現見,珠失,瑛英,瑠留,玩元`);
-    await makeList('Kick', `表展裏褒猿俵哀衰喪袋裂襲衷製衣`,
+    await makeList('Kick', `表展裏褒猿俵哀衰喪袋裂襲衷製衣麗`,
             `裂列,製制`);
     await makeList('Key', `作昨酢詐搾`, `昨日,詐言`);
     await makeList('Jammed in', `界介`, `界田`);
@@ -496,12 +496,12 @@ async function makeGroupedLists() {
         `路各,跳兆,跡赤,距巨,蹴就,踪宗`);
     await makeList('Flowers (top) 3', `花草茶苦落葉芸苺英茂芝荒芽菌菊芯蓄蓮蔵墓`,
             `花化,草早,苦古,苺母,英央,芝之,芽牙,芯心,蓄畜,蓮連`);
-    await makeList('Flowers (top) 2', `苗茨芳蒙葵莉茜茎荘蒼萌藩菅蔑藍藻繭慕幕`,
+    await makeList('Flowers (top) 2', `苗茨芳蒙葵莉茜茎荘蒼萌藩菅蔑藍藻繭慕幕苑`,
             `苗田,芳方,莉利,茜西,荘壮,蒼倉,萌明,菅官,藍監`);
     await makeList('Flowers (top) 1', `荷薬苛若夢藤菓華菜著蒸芋薦葬薄薪蓋萎募`,
             `荷何,薬楽,苛可,若右,菓果,著者,芋干,薪新,萎委`);
     await makeList('Flowers (top)', `
-        花草茶苦落葉芸苺英荷薬苛若夢藤菓華菜著蒸芋薦葬薄蔵茂芝幕墓
+        花草茶苦落葉芸苺英荷薬苛若夢藤菓華菜著蒸芋薦葬薄蔵茂芝幕墓苑
         荒芽菌菊芯蓄蓮慕萎募薪蓋苗茨芳蒙葵繭莉茜茎荘蒼萌藩菅蔑藍藻`,
         `花化,草早,苦古,苺母,英央,芝之,芽牙,芯心,蓄畜,蓮連,
         苗田,芳方,莉利,茜西,荘壮,蒼倉,萌明,菅官,藍監,荷何,
@@ -580,8 +580,8 @@ async function makeGroupedLists() {
     await makeList('Coffin', `考者老拷孝`, `者日,孝子`);
     await makeList('Clown', `部倍培賠陪剖`, `培土,賠貝`);
     await makeList('Clothes', `裁製壊懐装依衣喪袋襲裂`, `製制,袋代,襲龍,裂列,装壮`);
-    await makeList('Cliff (flank top and left)', `反歴圧厚厄暦盾后灰`,
-            `反又,圧土,灰火`);
+    await makeList('Cliff (flank top and left)', `反歴圧厚厄暦盾后灰厘`,
+            `反又,圧土,灰火, 厘里`);
     await makeList('Cleat', `受妥愛乳隠浮菜採稲瞬穏彩鶏渓采淫`, `妥女,乳孔,采木`);
     await makeList('Clan', `氏紙民低底婚抵邸`, `紙糸`);
     await makeList('Circle', `熱勢熟執塾丸`, `執幸`);
@@ -595,9 +595,9 @@ async function makeGroupedLists() {
             `較交,軸由,斬斤,軌九,軒干,軟欠,轄害`);
     await makeList('Canopy (left) 2', `序腐鹿廃床摩磨魔庄麻唐庸慶席度`,
             `序予,廃発,床木,庄土,麻林`);
-    await makeList('Canopy (left) 1', `広店庭府底座応庁康庫廊厘廉`,
+    await makeList('Canopy (left) 1', `広店庭府底座応庁康庫廊廉`,
             `店占,庭廷,府付,応心,庁丁,庫車,廊郎,厘里,廉兼`);
-    await makeList('Canopy (left)', `広厘店庭府底座応庁康庫席廊序腐鹿廃床摩磨魔庄麻唐庸慶廉`,
+    await makeList('Canopy (left)', `広店庭府底座応庁康庫席廊序腐鹿廃床摩磨魔庄麻唐庸慶廉`,
             `序予,廃発,床木,庄土,麻林,店占,庭廷,府付,応心,庁丁,庫車,廊郎,厘里,廉兼`);
     await makeList('Cage', `医区匹堰匠匿`, `医矢,匠斤,匿若`);
     await makeList('Bundle', `速整束頼瀬疎勅`, `頼頁,疎疋,勅力`);
@@ -627,11 +627,11 @@ async function makeGroupedLists() {
     await makeList('Bear', `追館官師管遣阜帥菅`, `阜十,帥巾`);
     await makeList('Beans', `頭登短豊豆闘痘澄艶鼓`, `頭頁,短矢,豊曲,鼓支`);
     await makeList('Bar (right)', `残浅銭践桟`, `銭金,践足,桟木`);
-    await makeList('Bamboo 2', `筆符筋簡範筒籍笠箸簿篤箋籠`,
+    await makeList('Bamboo 2', `筆符筋簡範筒籍笠箸簿篤箋籠篭`,
             `符付,簡間,筒同,笠立,箸者,篤馬`);
     await makeList('Bamboo 1', `竹答算第築箱笑等笛節箇策管`,
             `答合,箱相,等寺,笛由,節即,箇固,管官`);
-    await makeList('Bamboo (top)', `竹答算第築箱笑等笛節箇策管筆符筋簡範筒籍笠箸簿篤箋籠`,
+    await makeList('Bamboo (top)', `竹答算第築箱笑等笛節箇策管筆符筋簡範筒籍笠箸簿篤箋籠篭`,
             `答合,箱相,等寺,笛由,節即,箇固,管官,符付,簡間,筒同,笠立,箸者,篤馬`);
     await makeList('Axe', `斤斥近所新折兵祈断質訴浜析哲暫丘岳斬誓匠逝漸`,
             `所戸,木析,斬車`);
@@ -683,9 +683,9 @@ async function makeGroupedLists() {
     await makeList('Medical (meaning)', `医薬診症健痛害傷臓咳療菌哺遇屁`);
     await makeList('Light (meaning)', `陰`);
     await makeList('Life (meaning)', `生寿命活居存在誕産亡死暮歳逝没`);
-    await makeList('Language (meaning) 2', `弁詩巻批応本簿帳冊栞条嘆喋項諮款`);
+    await makeList('Language (meaning) 2', `弁詩巻批応本簿帳冊栞条嘆喋項諮款彙`);
     await makeList('Language (meaning) 1', `語答申声読談話耳論議詞句告警書哉`);
-    await makeList('Language (meaning)', `語答申声読談話耳論議詞句告警書弁詩巻批応本簿帳冊栞条嘆喋項諮款哉`);
+    await makeList('Language (meaning)', `語答申声読談話耳論議詞句告警書弁詩巻批応本簿帳冊栞条嘆喋項諮款彙哉`);
     await makeList('Information, Communication, Inquire (meaning)', `糾検査調`);
     await makeList('Home, household objects (meaning)', `皿屋住家鏡席枕傘机鍵椅卓畳扉架庄寮灯荘`);
     await makeList('Food (meaning) 2', `辛餓鉢煎炊漬酵穀瓶脂沸繊餅串噛`);
@@ -703,9 +703,9 @@ async function makeGroupedLists() {
     await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎`);
     await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂`);
     await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足呂眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩`);
-    await makeList('Animals (meaning) 2', `鮭犬毛蟹鰐蛇畜蚊騎魚翼鳩猿匹竜釣卵熊狩狐亀甲駒`);
-    await makeList('Animals (meaning) 1', `虫貝牛羊鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏尾牙鹿`);
-    await makeList('Animals (meaning)', `蜂鮭毛犬蟹鰐蛇畜蚊騎魚翼鳩猿尾匹竜釣卵熊狩虫貝牛羊駒鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏狐牙鹿亀甲`);    
+    await makeList('Animals (meaning) 2', `鮭犬毛蟹鰐蛇畜蚊騎魚翼鳩猿匹竜釣卵熊狩狐亀甲餌駒`);
+    await makeList('Animals (meaning) 1', `虫貝牛羊鳥鳴狼猫象漁獣虎蛍豚鯉隼烏蝶鯨鶏尾牙鹿`);
+    await makeList('Animals (meaning)', `蜂獣鮭毛餌犬蟹鰐蛇畜蚊騎魚翼鳩猿尾匹竜釣卵熊狩虫貝牛羊駒鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏狐牙鹿亀甲`);    
     await makeList('JLPT (extra Jouyou)', jlpt['none']);
     await makeList('JLPT N1', jlpt[1]);
     await makeList('JLPT N2', jlpt[2]);

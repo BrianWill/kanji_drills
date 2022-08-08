@@ -26,7 +26,7 @@ document.body.onkeydown = async function (evt) {
     if (currentList) {
         var ele = quizItemsDiv.children[currentItemIdx];
         var card = getCurrentCard();
-        if (evt.key === 's') {
+        if (evt.code === 'KeyS') {
             evt.preventDefault();
             revealAnswer(ele);
         } else if (evt.key === 'Escape') {
@@ -50,14 +50,10 @@ document.body.onkeydown = async function (evt) {
         } else if ((evt.key === 'ArrowRight' && evt.altKey) || evt.key === 'End') {
             evt.preventDefault();
             setCurrentItem(quizItemsDiv.children.length - 1, true);
-        } else if (evt.key === 'q') {  // mark
+        } else if (evt.code === 'KeyG') {
             evt.preventDefault();
-            await setCardMarking(card.data.uuid, marked);
-            ele.classList.add('marked');
-        } else if (evt.key === 'e') {  // unmark
-            evt.preventDefault();
-            await setCardMarking(card.data.uuid, unmarked);
-            ele.classList.remove('marked');
+            await toggleCardMarking(card.data.uuid);
+            ele.classList.toggle('marked');
         } else if (evt.key === 'ArrowRight') {
             evt.preventDefault();
             ele.classList.add('greenState');
@@ -75,15 +71,19 @@ document.body.onkeydown = async function (evt) {
         } else if (evt.key === 'ArrowUp') {
             evt.preventDefault();
             prevItem(evt.altKey ? 4 : 1);
+        } else if ((evt.code === 'KeyR') && evt.altKey) {
+            let cards = currentList.cards;
+            await setCardState(blackState, cards, currentList);
+            presentQuiz(currentList, false);
         } else if (evt.code === 'KeyL' && evt.altKey) {
             evt.preventDefault();
             console.log(card);
             shell.openExternal('https://www.wanikani.com/kanji/' + card.data.character);
             shell.openExternal('https://jisho.org/search/' + card.data.character);
-        } else if ((evt.key === 'Enter' && evt.altKey) || evt.key === 'a') {
+        } else if ((evt.key === 'Enter' && evt.altKey) || evt.code === 'KeyA') {
             evt.preventDefault();
             presentQuiz(currentList, true, parseInt(workingSetCount.value));
-        } else if (evt.key === 'Enter' || evt.key === 'd') {
+        } else if (evt.code === 'KeyD') {
             evt.preventDefault();
             if (card.state !== blackState) {
                 return;
@@ -153,7 +153,7 @@ cardActions.onclick = async function (evt) {
     } else if (c.contains('reveal_answers')) {
         for (let ele of quizItemsDiv.children) {
             revealAnswer(ele);
-        }       
+        }
     } else if (c.contains('toggle_pairs')) {
         showPairs = !showPairs;
         togglePairsLink.innerText = showPairs ? 'hide pairs' : 'show pairs';
@@ -174,7 +174,7 @@ function countMarked(cardUUIDs) {
 function presentListMenu(noScroll) {
     currentList = null;
     let lists = Object.values(allListsByID);
-    lists.sort(function (a, b) { 
+    lists.sort(function (a, b) {
         if (b.name === a.name) {
             return 0;
         }
@@ -227,19 +227,19 @@ function presentListMenu(noScroll) {
 
 
 
-    blue.sort(function (a, b) { 
+    blue.sort(function (a, b) {
         return b.last_marked - a.last_marked;
     });
 
-    red.sort(function (a, b) { 
+    red.sort(function (a, b) {
         return b.last_marked - a.last_marked;
     });
 
-    green.sort(function (a, b) { 
+    green.sort(function (a, b) {
         return b.last_marked - a.last_marked;
     });
 
-    white.sort(function (a, b) { 
+    white.sort(function (a, b) {
         return b.last_marked - a.last_marked;
     });
 
@@ -267,9 +267,10 @@ function presentListMenu(noScroll) {
         let listState = stateClass[list.state];
         let date = '';
         if (list.state !== blackState) {
-            date = unixtimeToDate(list.last_marked).toLocaleDateString('en-us', { 
-                    year:"numeric", month:"short", day:"numeric"}) ;
-                    // "Friday, Jul 2, 2021"
+            date = unixtimeToDate(list.last_marked).toLocaleDateString('en-us', {
+                year: "numeric", month: "short", day: "numeric"
+            });
+            // "Friday, Jul 2, 2021"
         }
         let actions = '';
         if (list.state !== redState) {
@@ -354,27 +355,43 @@ async function presentQuiz(list, randomize, nCardsWorkingSet) {
 
     // sort cards into greenState and redState
     let greenCards = [];
-    let blackCards = [];
+    let unmarkedBlackCards = [];
+    let markedBlackCards = [];
     for (let card of list.cards) {
         switch (card.state) {
             case greenState:
                 greenCards.push(card);
                 break;
             case blackState:
-                blackCards.push(card);
+                if (card.data.marking === marked) {
+                    markedBlackCards.push(card);
+                } else {
+                    unmarkedBlackCards.push(card);
+                }
                 break;
         }
     }
     if (randomize) {
         nCardsWorkingSet = nCardsWorkingSet || 0;
-        let firstN = blackCards.slice(0, nCardsWorkingSet);
-        let rest = blackCards.slice(nCardsWorkingSet);
-        shuffle(firstN, true);
-        shuffle(rest);
-        blackCards = firstN.concat(rest);
+
+        if (markedBlackCards.length > 0) {
+            let firstN = markedBlackCards.slice(0, nCardsWorkingSet);
+            let rest = markedBlackCards.slice(nCardsWorkingSet);
+            shuffle(firstN, true);
+            shuffle(rest);
+            markedBlackCards = firstN.concat(rest);
+            shuffle(unmarkedBlackCards);
+        } else {
+            let firstN = unmarkedBlackCards.slice(0, nCardsWorkingSet);
+            let rest = unmarkedBlackCards.slice(nCardsWorkingSet);
+            shuffle(firstN, true);
+            shuffle(rest);
+            unmarkedBlackCards = firstN.concat(rest);
+        }
+
         shuffle(greenCards);
     }
-    list.cards = blackCards.concat(greenCards);
+    list.cards = markedBlackCards.concat(unmarkedBlackCards, greenCards);
     let html = '';
     let i = 0;
     for (var card of list.cards) {
@@ -434,7 +451,7 @@ async function review(colorState) {
                 if (card.data.marking == 1 && !cardSet.has(card.data.uuid)) {
                     let copy = Object.assign({}, card);  // shallow
                     copy.state = blackState;
-                    cards.push(copy);  
+                    cards.push(copy);
                     cardSet.add(card.data.uuid);
                 }
             }
@@ -539,15 +556,15 @@ function revealAnswer(ele) {
 
 document.body.onload = async function () {
     await loadEverything();
-    
+
     //await deleteAllLists();
 
     //await makeGroupedLists();
     //await loadEverything();
-    
+
     presentListMenu();
     console.log('loaded');
-    
+
     // let unused = await getUnusedKanji();
     // console.log(unused.length, unused);
     // console.log('num kanji ', kanjiCards.length);

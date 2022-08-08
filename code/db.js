@@ -143,10 +143,8 @@ async function deleteAllLists() {
     }
 }
 
-async function setCardMarking(cardUUID, marking) {
-    if (marking !== unmarked && marking !== marked) {
-        throw `invalid mark state: ${cardUUID}`;
-    }
+async function toggleCardMarking(cardUUID) {
+    let marking = (cardDataByUUID[cardUUID].marking === marked)? unmarked : marked;
     await db('card').where({ uuid: cardUUID }).update({ marking: marking });
     cardDataByUUID[cardUUID].marking = marking;
 }
