@@ -228,6 +228,10 @@ div.list_entry .list_actions .mark_white {
     color: rgb(224, 224, 224);
 }
 
+div.list_entry .list_actions .mark_yellow {
+    color: rgb(221, 186, 47);
+}
+
 .list_entry {
     padding: 10px;
     margin: 14px;
@@ -253,6 +257,17 @@ div.list_entry .list_actions .mark_white {
 .list_entry.red {
     background-color: rgb(158 48 34);
 }
+
+.list_entry.yellow {
+    background-color: rgb(220, 208, 40);
+}
+
+.list_entry.yellow .list_link,
+.list_entry.yellow .list_count,
+.list_entry.yellow .list_date {
+    color: rgb(56 55 55);
+}
+
 
 .list_entry.white {
     background-color: rgb(255, 255, 255);

@@ -693,13 +693,14 @@ async function makeGroupedLists() {
     await makeList('Food (meaning)', `亭飴喫焼飯酢肉汁醤鍋芋豆糖麺粒辛餓鉢煎炊漬酵穀瓶脂沸繊餅串噛`);
     await makeList('Feeling (meaning)', `情感喜歓悦嬉幸悲怒恋愛`);
     await makeList('Family (meaning)', `譜母父妹姉兄弟叔娘郎息子婿祖嬢妻婦夫孫戚姓紋`);
-    await makeList('Education (meaning)', `瞳塾習教校授師瞳`);
+    await makeList('Education (meaning)', `塾習教校授師`);
     await makeList('Directions (meaning)', `北上下南左東右西底内中外横側`);
     await makeList('Crime, Justice (meaning) 2', `訴訟則囚奪懲廷拘賊窃赦拐赦`);
     await makeList('Crime, Justice (meaning) 1', `罪犯非裁律罰権義判審盗怪拉`);
     await makeList('Crime, Justice (meaning)', `罪犯非裁律罰権義判審盗怪訴訟則囚奪懲廷拘賊窃赦拐赦拉`);
     await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇紅`);
     await makeList('Clothing (meaning)', `絹服布着鏡脱袖靴織条装聖拝綿衣帽縫錦絹`);
+    await makeList('Built Structures (meaning)', ``);
     await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎`);
     await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂`);
     await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足呂眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩`);

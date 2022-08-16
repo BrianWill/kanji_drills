@@ -10,6 +10,7 @@ const redState = 0;
 const blackState = 2;
 const blueState = 3;
 const whiteState = 4;
+const yellowState = 5;
 
 const unmarked = 0;
 const marked = 1;
@@ -19,7 +20,8 @@ const stateClass = {
     '1': 'green',
     '2': 'black',
     '3': 'blue',
-    '4': 'white'
+    '4': 'white',
+    '5': 'yellow'
 };
 
 var cardDataByUUID = {};   // the data loaded from JSON, which does not include DB row info
