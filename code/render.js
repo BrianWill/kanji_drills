@@ -8,7 +8,7 @@ var quizHeaderDiv = document.getElementById('quiz_header');
 var quizItemsDiv = document.getElementById('quiz_items');
 var currentListLink = document.getElementById('current_list_link');
 var cardActions = document.getElementById('card_actions');
-var togglePairsLink = document.getElementById('pair_toggle_link');
+// var togglePairsLink = document.getElementById('pair_toggle_link');
 
 var currentItemIdx = null;
 var currentList = null;
@@ -51,6 +51,9 @@ document.body.onkeydown = async function (evt) {
             evt.preventDefault();
             await toggleCardMarking(card.data.uuid);
             ele.classList.toggle('marked');
+        } else if (evt.code === 'KeyW') {
+            evt.preventDefault();
+            await toggleCardAnswered(card, ele);
         } else if (evt.key === 'ArrowRight') {
             evt.preventDefault();
             ele.classList.add('greenState');
@@ -62,10 +65,10 @@ document.body.onkeydown = async function (evt) {
             ele.classList.remove('greenState');
             revealAnswer(ele);
             await setCardState(blackState, [card], currentList);
-        } else if (evt.key === 'ArrowDown') {
+        } else if (evt.key === 'ArrowDown' || evt.code === 'KeyX') {
             evt.preventDefault();
             nextItem(evt.altKey ? 4 : 1);
-        } else if (evt.key === 'ArrowUp') {
+        } else if (evt.key === 'ArrowUp' || evt.code === 'KeyZ') {
             evt.preventDefault();
             prevItem(evt.altKey ? 4 : 1);
         } else if ((evt.code === 'KeyR') && evt.altKey) {
@@ -101,10 +104,18 @@ document.body.onkeydown = async function (evt) {
 
 listMenuDiv.onmousedown = async function (evt) {
     evt.preventDefault();
-    if (evt.target.classList.contains('review_red')) {
+    if (evt.target.classList.contains('review_red_marked')) {
+        review(redState, true);
+    } else if (evt.target.classList.contains('review_blue_marked')) {
+        review(blueState, true);
+    } else if (evt.target.classList.contains('review_yellow_marked')) {
+        review(yellowState, true);
+    } else if (evt.target.classList.contains('review_red')) {
         review(redState);
     } else if (evt.target.classList.contains('review_blue')) {
         review(blueState);
+    } else if (evt.target.classList.contains('review_yellow')) {
+        review(yellowState);
     }
 }
 
@@ -449,14 +460,14 @@ async function presentQuiz(list, randomize, nCardsWorkingSet) {
     window.scrollTo(0, 0);
 }
 
-async function review(colorState) {
+async function review(colorState, marked) {
     let cards = [];
     let cardSet = new Set();
     let lists = Object.values(allListsByID);
     for (let list of lists) {
         if (list.state === colorState) {
             for (let card of list.cards) {
-                if (card.data.marking == 1 && !cardSet.has(card.data.uuid)) {
+                if ((!marked || card.data.marking == 1) && !cardSet.has(card.data.uuid)) {
                     let copy = Object.assign({}, card);  // shallow
                     copy.state = blackState;
                     cards.push(copy);
@@ -468,7 +479,8 @@ async function review(colorState) {
     let color = stateClass[colorState];
     currentList = {
         id: -1,
-        name: `All marked kanji from all <span class="${color}">${color}</span> lists (${cards.length})`,
+        name: `All ${marked ? 'marked' : ''} kanji from all 
+            <span class="${color}">${color}</span> lists (${cards.length})`,
         cards: cards
     };
     presentQuiz(currentList, true);
@@ -560,6 +572,23 @@ quizItemsDiv.ondblclick = async function (evt) {
 
 function revealAnswer(ele) {
     ele.classList.remove('hide_answer');
+}
+
+function hideAnswer(ele) {
+    ele.classList.add('hide_answer');
+}
+
+async function toggleCardAnswered(card, ele) {
+    if (card.state === blackState) {
+        ele.classList.add('greenState');
+        ele.classList.remove('redState');
+        revealAnswer(ele);
+        await setCardState(greenState, [card], currentList);
+    } else {
+        ele.classList.remove('greenState');
+        hideAnswer(ele);
+        await setCardState(blackState, [card], currentList);
+    }
 }
 
 document.body.onload = async function () {

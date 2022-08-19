@@ -17,59 +17,56 @@ npm start
 
 - Home or Alt-LeftArrow: jump to top of the page
 - End or Alt-RightArrow: jump to bottom of the page
-- Alt-Enter or A: re-sort the list
-- Enter or D: (on red card) mark the card green, mark one random black card (if any) green, and re-sort the list
-- UpArrow: select previous kanji
-- DownArrow: select next kanji
-- LeftArrow: put kanji in unanswered set
-- RightArrow: put kanji in answered set
+- Alt-R: reset all cards to unanswered
+- A: re-sort the list
 - S: unhide answer of current kanji
-- Q: mark kanji
-- E: unmark kanji
-- PageUp: in list, switch to previous list
-- PageDown: in list, switch to next list
+- D: (on red card) mark the card green, mark one random black card (if any) green, and re-sort the list
+- W or RightArrow: toggle whether kanji is answered/unanswered
+- G: toggle whether kanji is marked
+- Z or UpArrow: select previous kanji
+- X orDownArrow: select next kanji
+- PageUp: switch to previous list (works only when viewing a list)
+- PageDown: switch to next list (works only when viewing a list)
 
 Clicking a kun'yomi reading opens a jisho.org search in your browser for that word + kanji combo.
 
 ## Lists
 
-The main screen presents 200+ lists of the jouyou kanji. An individual kanji may appear in multiple lists.
+The main screen presents 400+ lists of the jouyou kanji. Each individual kanji may appear in multiple lists.
 
 - Click a list's name to see and drill the kanji in the list.
-- Click links to mark a list red, green, or black.
+- Click links to mark a list red, blue, yellow, green, white, or black.
 - A timestamp indicates when the list was last marked.
 
 The "meaning" lists contain the jouyou kanji whose primary meanings relates to a common theme. For example, the "Animals (meaning)" list contains the kanji related to animals.
 
-The other lists are named after a radical common to their kanji (using the Wanikani.com naming conventions). For example, the "Cage" list contains [the jouyou kanji that include the "cage" kanji](https://www.wanikani.com/radicals/cage). However, many of these lists, including "Cage", omit characters where the common radical is not easily recognizable. For example, the character 堰 includes the "cage" radical but in a way that looks significantly different from the others, so it has been omited from the "Cage" list.
+The other lists are named after a radical common to their kanji (using the Wanikani.com naming conventions). For example, the "Cage" list contains [the jouyou kanji that include the "cage" kanji](https://www.wanikani.com/radicals/cage). However, many of these lists, including "Cage", omit characters where the common radical is not easily recognizable. For example, the character 堰 includes the "cage" radical but in a way that is significantly less recognizable, so it has been omited from the "Cage" list.
 
-Other lists specify a position of the radical. For example, the "Building (left)" list includes the jouyou kanji that have the ["building" radical](https://www.wanikani.com/radicals/building) on the full left side of the character.
+Other lists specify the position of the radical. For example, the "Building (left)" list includes the jouyou kanji that have the ["building" radical](https://www.wanikani.com/radicals/building) on the full left side of the character.
 
 Lists with a number at the end of their names are subsets of the larger list with the same name. For example, the kanji of "Animals (meaning)" are divided into two subset lists: "Animals (meaning) 1" and "Animals (meaning) 2".
 
-## Recommended usage
+## Convention for list colors:
 
-- keep lists you've never studied marked black
-- lists you're currently actively studying should be marked red
-- lists you've studied but have put aside should be marked green
+- black: a list that you've never studied before
+- red: a list you are currently focused on studying
+- blue: a list that was recently marked red
+- yellow: a list that was recently marked yellow
+- green: archive of lists you have previously studied but will revist eventually
+- white: archive of lists that you won't revist
 
-Generally, you should avoid having too many active (red) lists at any one time. Also, you should periodically revisit green lists, marking them red to move them back into your working set.
+So to study a black list, mark it red, then incrementally demote it to blue, then yellow, and finally green. You should periodically move green lists back into your working set by marking them red. Once you feel you are done studying a list for good, mark it white.
 
-### Drilling a new list
+### Drilling a list
 
-Mark the list red before opening it, then:
+Use alt-R to reset the list, then:
 
-1. Mark a few more kanji red.
-2. Re-sort the list (ALT-Enter).
-3. Go through the red kanji top-to-bottom, marking the ones you confidently remember green. (Use LeftArrow to reveal a red kanji's info without changing its color.)
-4. Repeat these steps until eventually all kanji have gone from black to red to green.
+1. Try to recall the answer for the top card.
+2. Check your answer by hitting 'S'.
+3. If wrong, hit 'A' to reshuffle
+4. If correct, hit 'D' to mark the card as answered and reshuffle.
+5. Repeat until all cards have been marked answered.
 
-You may need to drill a set of red kanji multiple times before you're confortable marking more kanji red or green. You might also sometimes prefer marking only one new kanji red or green per iteration. Use your own judgement!
+## Reviewing marked cards
 
-### Drilling an old list
-
-1. Click the link at the top "Mark all kanji black".
-2. Go through the kanji top-to-bottom, marking the ones you confidently remember green and the ones you don't red.
-3. Click the link at the top "Mark all red kanji black".
-4. Re-sort the list (ALT-Enter).
-4. Drill the black kanji as if they were a new list.
+The "review red", "review blue", and "review yellow" links

@@ -356,7 +356,7 @@ async function makeGroupedLists() {
     await makeList('Narwhal (flank top and left)', `左右友有存布在`,
             `左工,右口,友又,有月,存子,布巾,在土`);
     await makeList('Music', `農典豊遭槽曹`, `豊豆`);
-    await makeList('Mountain (top)', `山出岸岩炭嵐崖崇崩`, `岩石,炭灰,嵐風`);
+    await makeList('Mountain (top)', `山出岸岩炭嵐崖崇崩`, `岩石,崩朋,炭灰,嵐風`);
     await makeList('Mountain (left)', `崎岐峰峡岬峠`, `崎奇,岐支,岬甲`);
     await makeList('Mouth (surrounding)', `口四図国固囲園因団困囚圏回`,
             `国玉,固古,囲井,因大,団寸,困木,囚人,圏巻`);
@@ -701,9 +701,9 @@ async function makeGroupedLists() {
     await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇紅`);
     await makeList('Clothing (meaning)', `絹服布着鏡脱袖靴織条装聖拝綿衣帽縫錦絹`);
     await makeList('Built Structures (meaning)', ``);
-    await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎`);
-    await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂`);
-    await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足呂眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩`);
+    await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎腺`);
+    await makeList('Body (meaning) 1', `胃腹爪臓肌皮膚手骨髄筋血股脚息肺尻顔肩舌胴呂腎`);
+    await makeList('Body (meaning)', `胎体腕股鼻頭臓脇口髪足呂眉腰胴唇目眼膝脚指耳胸脳心手胃肝腹歯舌爪肌皮膚骨髄筋血息肺尻顔肩腺腎`);
     await makeList('Animals (meaning) 2', `鮭犬毛蟹鰐蛇畜蚊騎魚翼鳩猿匹竜釣卵熊狩狐亀甲餌駒`);
     await makeList('Animals (meaning) 1', `虫貝牛羊鳥鳴狼猫象漁獣虎蛍豚鯉隼烏蝶鯨鶏尾牙鹿`);
     await makeList('Animals (meaning)', `蜂獣鮭毛餌犬蟹鰐蛇畜蚊騎魚翼鳩猿尾匹竜釣卵熊狩虫貝牛羊駒鳥鳴狼猫象漁虎蛍豚鯉隼烏蝶鯨鶏狐牙鹿亀甲`);    
@@ -892,7 +892,7 @@ var jlpt = {
         譜淑帆憤酌暁傑錠璃遷拙峠篤叔雌堪吟甚崇漆岬紡礁屯姻擬睦閑曹詠卑侮鋳
         胆浪禍酪憧慶亜汰沙逝匿寡痢坑藍畔唄拷渓廉謹湧醜升殉煩劾桟婿慕罷矯某
         囚泌漸藻妄蛮倹壱韻謁艶旺翁箇嚇褐棺斤虞薫侯墾采蚕嗣肢賜爵儒愁遵宵抄
-        硝詔薪畝斥繕塑但逐嫡衷勅朕逓痘謄弐頒眉賦附丙倣繭耗冶窯濫吏厘楼`,
+        硝詔薪畝斥繕塑但逐嫡衷勅朕逓痘謄弐頒眉賦附丙倣繭耗冶窯濫吏厘楼朋`,
     'none': `分里身的阪無可尻岡坊韓枕丼爪寿鍋牙狙賂阜埼孝遜蜂酎蜜畑誰謎
         俺叱頃呪賭斬椅鍵粧崖箸芯貼闇隙脇巾丈唐鬱茨戴哺傲栃脊蔑挨宛畏萎咽淫
         臼餌怨臆苛蓋骸柿顎葛釜瓦玩畿僅串窟稽詣桁舷股乞勾喉慌梗痕挫塞柵拶
