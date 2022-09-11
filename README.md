@@ -2,9 +2,12 @@
 
 ## Installation
 
-You'll first need to install [Node (download link)](https://nodejs.org/en/download/).
+Run the .exe (Windows) or install the App (Mac):
 
-Then at the command line:
+- [Windows (download link)](https://drive.google.com/file/d/1XkWvs4p-hlS2mIVAymeoLfmZ3vMdMVE7/view?usp=sharing)
+- [Mac (download link)](https://drive.google.com/file/d/1rn8cfVHObbxlKUVeh8cmCwuvnvFVOgeY/view?usp=sharing)
+
+If you prefer to clone the repo, you'll need [Node (download link)](https://nodejs.org/en/download/). Then at the command line:
 
 ```
 npm install -g electron
@@ -20,13 +23,13 @@ npm start
 - Alt-R: reset all cards to unanswered
 - A: re-sort the list
 - S: unhide answer of current kanji
-- D: (on red card) mark the card green, mark one random black card (if any) green, and re-sort the list
+- D: mark the card answered and re-sort the list
 - W or RightArrow: toggle whether kanji is answered/unanswered
-- G: toggle whether kanji is marked
+- G: toggle whether kanji is marked (highlighted yellow)
 - Z or UpArrow: select previous kanji
-- X orDownArrow: select next kanji
-- PageUp: switch to previous list (works only when viewing a list)
-- PageDown: switch to next list (works only when viewing a list)
+- X or DownArrow: select next kanji
+- PageUp: switch to previous list
+- PageDown: switch to next list
 
 Clicking a kun'yomi reading opens a jisho.org search in your browser for that word + kanji combo.
 
@@ -48,25 +51,19 @@ Lists with a number at the end of their names are subsets of the larger list wit
 
 ## Convention for list colors:
 
-- black: a list that you've never studied before
-- red: a list you are currently focused on studying
-- blue: a list that was recently marked red
-- yellow: a list that was recently marked yellow
-- green: archive of lists you have previously studied but will revist eventually
-- white: archive of lists that you won't revist
-
-So to study a black list, mark it red, then incrementally demote it to blue, then yellow, and finally green. You should periodically move green lists back into your working set by marking them red. Once you feel you are done studying a list for good, mark it white.
+- black: unstudied lists
+- red: main working set
+- blue: second working study
+- yellow: third working set
+- green: archive (will revisit later)
+- white: archive (will not revisit)
 
 ### Drilling a list
 
-Use alt-R to reset the list, then:
+Use 'alt-R' to reset the list and 'A' to reshuffle, then:
 
 1. Try to recall the answer for the top card.
 2. Check your answer by hitting 'S'.
 3. If wrong, hit 'A' to reshuffle
 4. If correct, hit 'D' to mark the card as answered and reshuffle.
 5. Repeat until all cards have been marked answered.
-
-## Reviewing marked cards
-
-The "review red", "review blue", and "review yellow" links

@@ -1,7 +1,7 @@
 {
   "name": "kanji_flashcards",
   "version": "1.0.0",
-  "description": "An Electron-based Anki-like flashcard program",
+  "description": "An Electron-based drill program for kanji",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -14,22 +14,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrianWill/flashcards.git"
+    "url": "git+https://github.com/BrianWill/kanji_drills.git"
   },
   "author": "Brian Will",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BrianWill/flashcards/issues"
+    "url": "https://github.com/BrianWill/kanji_drills/issues"
   },
-  "homepage": "https://github.com/BrianWill/flashcards#readme",
+  "homepage": "https://github.com/BrianWill/kanji_drills#readme",
   "devDependencies": {
-    "electron": "^19.0.7",
-    "electron-rebuild": "^3.2.0",
-    "knex": "^2.0.0",
-    "sqlite3": "^5.0.6",
+    "electron": "^19.0.10",
+    "electron-rebuild": "^3.2.9",
+    "knex": "^2.3.0",
+    "sqlite3": "^5.0.11",
     "uuid": "^8.3.2"
   },
   "dependencies": {
-    
+    "update-electron-app": "^2.0.1"
   }
 }
