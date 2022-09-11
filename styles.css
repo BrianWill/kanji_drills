@@ -207,6 +207,10 @@ span.list_link:hover {
     color: rgb(27, 150, 27);
 }
 
+#quiz_header .yellow {
+    color: rgb(220, 208, 40);
+}
+
 
 div.list_entry .list_actions .mark_red {
     color: rgb(233 56 56);

@@ -188,9 +188,11 @@ async function makeGroupedLists() {
         棺官,村寸,標票,材才,松公,格各,梅毎,械戒,機幾,株朱,模莫,
         板反,杯不,柵冊,柿市,桁行,棒奉`);
     await makeList('Treasure chest', `脳胸悩凶`, ``);
+    await makeList('Treasure', `気図便殺希区更爽刈脳胸悩凶`, ``);
     await makeList('Triangle (top)', `命令会全今貪舎倉傘介`, `全王`);
     await makeList('Trash', `育流棄徹撤硫`, `育月,棄果`);
     await makeList('Towel', `希帯巾帽幣帰`, `帽冒`);
+    await makeList('Top Hat', `組助査祖狙宜租阻畳且粗`, ``);
     await makeList('Tongue', `活話辞乱舌括憩`, `活舌,話言,辞辛`);
     await makeList('Tombstone', `軽経怪径茎`, `軽車,経糸`);
     await makeList('Toe', `上下外掛偵卓貞悼赴朴`, `上一,下一,外夕,卓早,貞貝,赴走,朴木`);
@@ -252,6 +254,7 @@ async function makeGroupedLists() {
     await makeList('Spirit (left)', `礼裾社初神福祈禅裕被袖祝褐視補祖複祉裸襟祥禍`,
             `社土,初刀,神申,祈斤,禅単,裕谷,被皮,
             袖由,祝兄,視見,祖且,祉止,裸果,襟禁,祥羊`);
+    await makeList('Spice', `壁薪親辛宰幸倖辞執報避壁樟摯梓新章幸`, '');
     await makeList('Slice', `劾該核咳刻`, `劾力,該言,核木,咳口`);
     await makeList('Skin (right)', `皮波被彼破披`, `破石`);
     await makeList('Simple', `戦単禅弾`, `弾弓`);
@@ -380,7 +383,7 @@ async function makeGroupedLists() {
             `腕宛,腰要,肺市,肘寸,肢支,肝干,脚却,胴同,肪方,
             胞包,膜莫,胎台,胆旦,腺泉,臆意,腫重`);
     await makeList('Mole', `倒致至到窒`, `窒穴`);
-    await makeList('Mohawk', `滴摘適敵`, ``);
+    await makeList('Mohawk', `滴摘適敵嫡`, ``);
     await makeList('Misc 4', `為旧甘舞牙壁充孝即琴輝塗鬱覇舗且憂恭弊堕垂`,``);
     await makeList('Misc 3', `望求司軍面弁可静飛岡革型差鮮靴児麗衆撃背既`,``);
     await makeList('Misc 2', `甚屯升壱葛釜瓦串墾嗣璽塑丙蔽貌冥麺耗弄聖辣`,``);
@@ -435,7 +438,7 @@ async function makeGroupedLists() {
             `路足,格木,絡糸,略田,賂貝`);
     await makeList('King (left)', `王理球現環珍班珠瑛瑠瑞璃斑玩`,
             `理里,球求,現見,珠失,瑛英,瑠留,玩元`);
-    await makeList('Kick', `表展裏褒猿俵哀衰喪袋裂襲衷製衣麗`,
+    await makeList('Kick', `表展裏褒猿俵哀衰喪袋裂襲衷製衣麗鹿`,
             `裂列,製制`);
     await makeList('Key', `作昨酢詐搾`, `昨日,詐言`);
     await makeList('Jammed in', `界介`, `界田`);
@@ -658,7 +661,7 @@ async function makeGroupedLists() {
     await makeList('Time (meaning) 2', `遅速早久昔経現暇回朝晩夜泊夕昼暦旦`);
     await makeList('Time (meaning) 1', `予前後秒時月日今曜昨年歳期間週暁曙`);
     await makeList('Time (meaning)', `暁旦曙予前後秒時月日暦曜昨年歳期間遅今速早久昔経現暇回朝晩夜泊夕週昼`);
-    await makeList('Sound, Music (meaning)', `曲楽歌音声静笛響奏聴唱鐘琴喧`);
+    await makeList('Sound, Music (meaning)', `曲楽歌音声静笛響奏聴唱鐘琴喧唄`);
     await makeList('Shapes (meaning) 2', `太角境狭長高坂細周玉枚容穴厚姿`);
     await makeList('Shapes (meaning) 1', `凸凹痩円形丸小大線広端径濃平`);
     await makeList('Shapes (meaning)', `凸凹痩円形丸小大玉周線広端径濃平太角境狭長高坂細枚容穴厚姿`);
@@ -698,7 +701,7 @@ async function makeGroupedLists() {
     await makeList('Crime, Justice (meaning) 2', `訴訟則囚奪懲廷拘賊窃赦拐赦`);
     await makeList('Crime, Justice (meaning) 1', `罪犯非裁律罰権義判審盗怪拉`);
     await makeList('Crime, Justice (meaning)', `罪犯非裁律罰権義判審盗怪訴訟則囚奪懲廷拘賊窃赦拐赦拉`);
-    await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇紅`);
+    await makeList('Colors (meaning)', `色彩丹黄赤茜青紺緋蒼白黒墨緑紫明光陽暗闇紅藍`);
     await makeList('Clothing (meaning)', `絹服布着鏡脱袖靴織条装聖拝綿衣帽縫錦絹`);
     await makeList('Built Structures (meaning)', ``);
     await makeList('Body (meaning) 2', `体腕鼻頭脇口髪足眉腰目眼膝指耳胸脳心歯肝唇胎腺`);

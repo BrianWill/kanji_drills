@@ -104,13 +104,7 @@ document.body.onkeydown = async function (evt) {
 
 listMenuDiv.onmousedown = async function (evt) {
     evt.preventDefault();
-    if (evt.target.classList.contains('review_red_marked')) {
-        review(redState, true);
-    } else if (evt.target.classList.contains('review_blue_marked')) {
-        review(blueState, true);
-    } else if (evt.target.classList.contains('review_yellow_marked')) {
-        review(yellowState, true);
-    } else if (evt.target.classList.contains('review_red')) {
+    if (evt.target.classList.contains('review_red')) {
         review(redState);
     } else if (evt.target.classList.contains('review_blue')) {
         review(blueState);
@@ -460,14 +454,14 @@ async function presentQuiz(list, randomize, nCardsWorkingSet) {
     window.scrollTo(0, 0);
 }
 
-async function review(colorState, marked) {
+async function review(colorState) {
     let cards = [];
     let cardSet = new Set();
     let lists = Object.values(allListsByID);
     for (let list of lists) {
         if (list.state === colorState) {
             for (let card of list.cards) {
-                if ((!marked || card.data.marking == 1) && !cardSet.has(card.data.uuid)) {
+                if (!cardSet.has(card.data.uuid)) {
                     let copy = Object.assign({}, card);  // shallow
                     copy.state = blackState;
                     cards.push(copy);
@@ -479,7 +473,7 @@ async function review(colorState, marked) {
     let color = stateClass[colorState];
     currentList = {
         id: -1,
-        name: `All ${marked ? 'marked' : ''} kanji from all 
+        name: `All kanji from all 
             <span class="${color}">${color}</span> lists (${cards.length})`,
         cards: cards
     };
